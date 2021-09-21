@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Наталья Трофимова](https://up.htmlacademy.ru/htmlcss/32/user/436529).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
