@@ -5,71 +5,77 @@
   <title>HTML Academy: Девайс-Страница каталога Моноподы для селфи</title>
 </head>
 <body>
-  <header class="page-header">
-    <!-- Главное меню -->
-    <nav class="navigation">
+  <header class="page-header"> 
+    <!-- Это центровщик -->
+    <div class="header-wrapper">
       <!-- Логотип -->
       <a href="https://htmlacademy.ru/">
         <img class="logo" src="" alt="Логотип магазина «Девайс»">
       </a>
-      <!-- Пользовательское меню (часть главного меню) -->
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Поиск по сайту</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Коля Петухов</a>
-        </li>
-        <li class="navigation-item">
-          <button class="navigation-link" type="button">Выйти</button>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-item">
-          <!--Если я верно поняла, это кнопка, 
-          т.к. при нажатии на иконку и на слово "Корзина" появляется блок с тем, что лежит в корзине. 
-          А далее в этом блоке уже ссылка на страницу с корзиной. -->
-          <button type="button" class="navigation-link">Корзина</button> 
-        </li>
-      </ul>
-      <!-- Меню сайта (часть главного меню) -->
-      <ul class="navigation-list navigation-site">        
-        <li class="navigation-item">            
-          <a class="navigation-item" href="#">Каталог товаров</a>
-          <!-- Выпадающее меню каталога товаров -->
-          <ul class="visually-hidden navigation-list catalog-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="navigation-item">              
-              <a class="navigation-link" href="#">Моноподы для cелфи</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Умные часы</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-item" href="#">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-item" href="#">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-item" href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
+      <!-- Блок с поиском, авторизацией и спецссылками -->
+      <div class="header-special-wrapper">
+        <!-- Поиск -->
+        <form class="search" action="https://echo.htmlacademy.ru/" method="get">
+          <!-- Сомневалась, надо ли тут label, нашла статью https://htmlacademy.ru/blog/boost/frontend/always-use-a-label, поняла, что надо -->
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input type="search" name="search" id="search" placeholder="Поиск по сайту"> 
+          <button type="submit">Поиск</button>
+        </form>
+        <!-- Авторизация -->
+        <div class="authorization">
+          <a class="authorization-link" href="#">Коля Петухов</a>
+          <a class="authorization-link" href="#">Выйти</a>            
+        </div>
+        <!-- Спецссылки -->
+        <ul class="header-special-list">
+          <li class="header-special-item">
+            <a class="header-special-link" href="#">Сравнить</a>
+          </li>
+          <li class="header-special-item">              
+            <span>2</span><a class="header-special-link" href="#">Корзина</a> 
+          </li>
+        </ul>
+      </div>
+      <!-- Меню сайта -->
+      <nav class="site-navigation">
+        <ul class="site-navigation-list">            
+          <li class="site-navigation-item">            
+            <a class="site-navigation-link" href="#">Каталог товаров</a>
+            <!-- Выпадающее меню каталога товаров -->
+            <ul class="catalog-navigation-list">
+              <li class="catalog-navigation-item">
+                <a class="catalog-navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <!-- Ссылка на вторую страницу, которую размечаем -->
+                <a class="catalog-navigation-link" href="monopods.html">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="catalog-navigation-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="catalog-navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="catalog-navigation-link" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="catalog-navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-list" href="#">Доставка</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-list" href="#">Гарантия</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-list" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- Главная часть -->
   <main class="main-inner">
@@ -88,20 +94,30 @@
       </ul>
     </header>
     <!-- Раздел с фильтрами и карточками товаров -->
-    <section class="catalog-products">
-      <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-      <!-- Фильтр -->
-      <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-        <h3 class="form-title">Фильтр:</h3>
+    <section class="catalog-products"> 
+      <h2 class="form-title">Фильтр:</h2>    
+      <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">        
         <!-- Фильтр цены -->
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость</legend>
+          <!-- Кружочки на фильтре -->
           <button class="range-toggle toggle-min" type="button">
             <span class="visually-hidden">Изменить минимальную цену.</span>
           </button>
           <button class="range-toggle toggle-max" type="button">
             <span class="visually-hidden">Изменить максимальную цену.</span>
           </button>
+          <!-- Горизонтальный ползунок, который будет скрыт, т.к. верстаться будет через div, нужен для 
+            семантики --> 
+          <p class="visually-hidden">          
+            <label for="min-price">Минимальная цена</label>  
+            <input class="visually-hidden" type="range" name="min-price" id="min-price" min="0" max="4000">
+          </p>
+          <p class="visually-hidden">
+            <label for="max-price">Максимальная цена</label>
+            <input class="visually-hidden" type="range" name="max-price" id="max-price" min="1000" max="5000">
+          </p>
+          <!-- Текст под ползунком -->
           <label class="catalog-filter-label">
             от <input class="catalog-filter-input" type="number" name="min-price">
           </label> 
@@ -110,72 +126,53 @@
           </label>
         </fieldset>
         <!-- Фильтр цвета -->
+        <!-- Вопрос: этот фильтр лучше оставить списком ul или переделать в div? -->
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Цвет</legend>
           <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="black" checked>
-                <span class="control-mark"></span>
-                <span class="control-label">Черный</span>
-              </label>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="black-color" type="checkbox" name="black" checked>                
+              <label for="black-color" class="catalog-filter-label">Черный</label>              
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="white" checked>
-                <span class="control-mark"></span>
-                <span class="control-label">Белый</span>
-              </label>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="white-color" type="checkbox" name="white" checked>                
+              <label for="black-color" class="catalog-filter-label">Белый</label>              
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="blue">
-                <span class="control-mark"></span>
-                <span class="control-label">Синий</span>
-              </label>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="blue-color" type="checkbox" name="blue">                
+              <label for="black-color" class="catalog-filter-label">Синий</label>              
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="red">
-                <span class="control-mark"></span>
-                <span class="control-label">Красный</span>
-              </label>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="red-color" type="checkbox" name="red">                
+              <label for="black-color" class="catalog-filter-label">Красный</label>              
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="pink">
-                <span class="control-mark"></span>
-                <span class="control-label">Розовый</span>
-              </label>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="pink-color" type="checkbox" name="pink">                
+              <label for="black-color" class="catalog-filter-label">Розовый</label>              
             </li>            
           </ul>
         </fieldset>
         <!-- Фильтр Bluetooth -->
+        <!-- ВОПРОС: Этот фильтр лучше оставить списком ul или переделать в div? -->
         <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Bluetooth</legend>
+          <legend class="catalog-filter-title">Bluetooth</legend>        
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="with_bluetooth" type="radio" name="bluetooth" value="yes" 
+              checked>                
+              <label for="with_bluetooth" class="catalog-filter-label">Есть</label>             
+            </li>
+            <li class="catalog-filter-item">              
+              <input class="catalog-filter-input" id="without_bluetooth" type="radio" name="bluetooth" value="no">                
+              <label for="without_bluetooth" class="catalog-filter-label">Нет</label>              
+            </li>          
+          </ul>
         </fieldset>
-        <ul class="catalog-filter-list">
-          <li class="catalog-filter-item">
-            <label class="control">
-              <input class="visually-hidden control-input" type="radio" name="bluetooth" value="yes" 
-              checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Есть</span>
-            </label>
-          </li>
-          <li class="catalog-filter-item">
-            <label class="control">
-              <input class="visually-hidden control-input" type="radio" name="bluetooth" value="no">
-              <span class="control-mark"></span>
-              <span class="control-label">Нет</span>
-            </label>
-          </li>          
-        </ul>
         <button class="button" type="submit">Показать</button>
         </form>
         <!-- Сортировка -->
-        <form class="sorting-type">
-          <h3 class="form-title">Сортировка:</h3>
+        <h2 class="form-title">Сортировка:</h2>
+        <form class="sorting-type">          
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
             <option value="popular">Сначала популярные</option>
@@ -192,30 +189,52 @@
           <span class="visually-hidden">По возрастанию</span>
         </a>
         <!-- Карточки -->
-        <ul class="product-list">
-          <li class="product-item">          
-            <img class="product-item-image" src="" alt="">
-            <h4 class="product-item-title">Любительская селфи-палка</h4>          
-            <b class="product-item-price">500 ₽</b> 
-            <a class="link product-item-link" href="#">Подробнее</a>         
-          </li>
-          <li class="product-item">          
-            <img class="product-item-image" src="" alt="">
-            <h4 class="product-item-title">Профессиональная селфи-палка </h4>          
-            <b class="product-item-price">1 500 ₽</b>                      
-          </li>
-          <li class="product-item">          
-            <img class="product-item-image" src="" alt="">
-            <h4 class="product-item-title">Непотопляемая селфи-палка</h4>          
-            <b class="product-item-price">2 500 ₽</b>                     
-          </li>
-          <li class="product-item"> 
-            <span class="product-item-mark">new</span>         
-            <img class="product-item-image" src="" alt="">
-            <h4 class="product-item-title">Селфи-палка «Следуй за мной»</h4>          
-            <b class="product-item-price">4 900 ₽</b>                     
-          </li>
-        </ul>
+        <!-- ВОПРОС: лучше оборачивать в карточке отдельно картинку и отдельно заголовок в ссылки? Или 
+        можно вместе картинку и заголовок обернуть в ссылку?         -->
+        <section class="products">
+          <h2 class="visually-hidden">Товары</h2>
+          <div class="product-card">          
+            <a class="product-card-link img-link" href="#">
+              <img class="product-card-image" src="" alt="Любительская селфи-палка">
+            </a>
+            <a class="link product-card-link" href="#">Подробнее</a>
+            <a class="product-card-link title-link">
+              <h4 class="product-card-title">Любительская селфи-палка</h4>
+            </a>          
+            <p class="product-card-price"><b>500 <span>₽</span></b></p>                     
+          </div>
+          <div class="product-card">          
+            <a class="product-card-link img-link" href="#">
+              <img class="product-card-image" src="" alt="Профессиональная селфи-палка">
+            </a>
+            <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
+            <a class="product-card-link title-link">
+              <h4 class="product-card-title">Профессиональная селфи-палка</h4>
+            </a>          
+            <p class="product-card-price"><b>1 500 <span>₽</span></b></p>                      
+          </div>
+          <div class="product-card">          
+            <a class="product-card-link img-link" href="#">
+              <img class="product-card-image" src="" alt="Непотопляемая селфи-палка">
+            </a>
+            <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
+            <a class="product-card-link title-link">
+              <h4 class="product-card-title">Непотопляемая селфи-палка</h4>
+            </a>          
+            <p class="product-card-price"><b>2 500 <span>₽</span></b></p>                     
+          </div>
+          <div class="product-card"> 
+            <span class="product-card-mark">new</span>         
+            <a class="product-card-link img-link" href="#">
+              <img class="product-card-image" src="" alt="Селфи-палка «Следуй за мной»">
+            </a>
+            <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
+            <a class="product-card-link title-link">
+              <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
+            </a>          
+            <p class="product-card-price"><b>4 900 <span>₽</span></b></p>                     
+          </div>
+        </section>
         <button class="button button-download-more" type="button">Загрузить ещё</button>
         <!-- Пагинация -->
         <ul class="pagination">
@@ -245,7 +264,9 @@
   </main>
   <!-- Футер -->
   <footer class="page-footer">
-    <img class="logo" src="" alt="">
+    <a href="https://htmlacademy.ru/">
+      <img class="logo" src="" alt="Логотип магазина «Девайс»">
+    </a>
     <p class="footer-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
     <ul class="footer-navigation">
       <li class="footer-navigation-item">
