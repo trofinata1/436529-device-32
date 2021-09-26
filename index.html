@@ -6,183 +6,184 @@
   </head>
   <body> 
     <!-- Хедер   -->
-    <header class="page-header">
-      <!-- Главное меню -->
-      <nav class="navigation">
+    <header class="page-header"> 
+      <!-- Центровщик -->
+      <div class="header-wrapper">
         <!-- Логотип -->
         <a href="https://htmlacademy.ru/">
           <img class="logo" src="" alt="Логотип магазина «Девайс»">
         </a>
-        <!-- Пользовательское меню (часть главного меню) -->
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Войти</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item">
-            <!--Если я верно поняла, это кнопка, 
-            т.к. при нажатии на иконку и на слово "Корзина" появляется блок с тем, что лежит в корзине. 
-            А далее в этом блоке уже ссылка на страницу с корзиной. -->
-            <button type="button" class="navigation-link">Корзина</button> 
-          </li>
-        </ul>
-        <!-- Меню сайта (часть главного меню) -->
-        <ul class="navigation-list navigation-site">
-          <!-- Эта ссылка должна вести на страницу целого каталога, с которой можно будет переходить 
-            на категории, которые указаны в выпадающем меню. Но у нас в ДЗ не страница каталога с 
-            категориями, а страница с уже выбранной категорией "Моноподы для селфи", то есть у нас нет
-            страницы "Каталог товаров", а есть страница "Моноподы для селфи", поэтому именно эта ссылка никуда
-            не ведет. -->
-          <li class="navigation-item">            
-            <a class="navigation-item" href="#">Каталог товаров</a>
-            <!-- Выпадающее меню каталога товаров -->
-            <ul class="navigation-list catalog-list">
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="navigation-item">
-                <!-- Ссылка на вторую страницу, которую размечаем -->
-                <a class="navigation-link" href="monopods.html">Моноподы для cелфи</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">Умные часы</a>
-              </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-item" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-item" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-item" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+        <!-- Блок с поиском, авторизацией и спецссылками -->
+        <div class="header-special-wrapper">
+          <!-- Поиск -->
+          <form class="search" action="https://echo.htmlacademy.ru/" method="get">            
+            <label for="search" class="visually-hidden">Поиск</label>
+            <input type="search" name="search" id="search" placeholder="Поиск по сайту"> 
+            <button type="submit">Поиск</button>
+          </form>
+          <!-- Авторизация -->
+          <div class="authorization">
+            <a class="authorization-link" href="#">Войти</a>            
+          </div>
+          <!-- Спецссылки -->
+          <ul class="header-special-list">
+            <li class="header-special-item">
+              <a class="header-special-link" href="#">Сравнить</a>
+            </li>
+            <li class="header-special-item">              
+              <span>2</span><a class="header-special-link" href="#">Корзина</a> 
+            </li>
+          </ul>
+        </div>
+        <!-- Меню сайта -->
+        <nav class="site-navigation">
+          <ul class="site-navigation-list">            
+            <li class="site-navigation-item">            
+              <a class="site-navigation-link" href="#">Каталог товаров</a>
+              <!-- Выпадающее меню каталога товаров -->
+              <ul class="catalog-navigation-list">
+                <li class="catalog-navigation-item">
+                  <a class="catalog-navigation-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-navigation-item">
+                  <!-- Ссылка на вторую страницу, которую размечаем -->
+                  <a class="catalog-navigation-link" href="monopods.html">Моноподы для cелфи</a>
+                </li>
+                <li class="catalog-navigation-item">
+                  <a class="catalog-navigation-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="catalog-navigation-item">
+                  <a class="catalog-navigation-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-navigation-item">
+                  <a class="catalog-navigation-link" href="#">Умные часы</a>
+                </li>
+                <li class="catalog-navigation-item">
+                  <a class="catalog-navigation-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-list" href="#">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-list" href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-list" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- Главная часть -->
     <main class="main-index">
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
       <!-- Раздел со слайдером -->
-      <section class="slider">        
-        <h2 class="visually-hidden">Популярные товары</h2>   
-        <!--Назвала секцию так, потому что надо было дать 
-        какой-то заголовок, но на самом деле не понятно, по какому принципу в слайдере именно эти товары,
-        из-за того, что они самые популярные, или еще по какой-то причине -->      
-        <ul class="slider-list">
-          <li class="slider-item">
-            <img class="slider-img" src="" alt="Квадрокоптер">
-            <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-            </button>
-            <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Следующее фото</span>
-            </button>
-            <!-- Цифры '01', '02', '03' указала пока через span, но, думаю, потом их можно будет сделать 
-            псевдо-элементами, поэтому класс этим span не задаю -->
-            <span>01</span>            
+      <section class="slider">              
+        <h2 class="visually-hidden">Популярные товары</h2>        
+        <!-- Блок с самими слайдами, т.е. с основной информацией на слайдах -->
+        <div class="slider-list"> 
+          <div class="slider-item"> 
+            <img class="slider-img" src="" alt="Квадрокоптер">                     
             <h3 class="slider-title">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="slider-description">
-                Этот обычный, на первый взгляд, квадрокоптер оснащен 
-                мощным лазером, замаскированным под стандартную камеру.
-              </p>
-              <a class="link" href="#">Подробнее</a>  
-              <!-- Характеристики товара -->
-              <dl class="slider-specifications">
-                <dt class="slider-specifications-item">Дальность полета</dt>
-                  <dd>800 м</dd>
-                <dt class="slider-specifications-item">Радиус поражения</dt>
-                  <dd>50 м</dd>
-              </dl>            
-          </li>      
-          <li class="slider-item">
-            <img class="slider-img" src="" alt="Фитнес-браслет">
-            <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-            </button>
-            <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Следующее фото</span>
-            </button>
-            <span>02</span>
+            <p class="slider-description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен 
+              мощным лазером, замаскированным под стандартную камеру.
+            </p>
+            <a class="link" href="#">Подробнее</a>  
+            <!-- Характеристики товара -->
+            <table class="slider-specifications">
+              <caption class="visually-hidden">Технические характеристики товара</caption>              
+              <tr class="slider-specifications-meaning">
+                <td>800 м</td>
+                <td>50 м</td>
+              </tr>              
+              <tr class="slider-specifications-term">
+                <td>Дальность полета</td>
+                <td>Радиус поражения</td>
+              </tr>             
+            </table> 
+          </div>
+          <div class="slider-item"> 
+            <img class="slider-img" src="" alt="Фитнес-браслет">            
             <h3 class="slider-title">Худеем правильно!</h3>
-              <p class="slider-description">
-                Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и 
-                соблюдать диету.
-              </p>
-              <a class="link" href="#">Подробнее</a>  
-              <!-- Характеристики товара -->
-              <dl class="slider-specifications">
-                <dt class="slider-specifications-item">Без подзарядки</dt>
-                  <dd>48 часов</dd>                
-              </dl>            
-          </li>     
-          <li class="slider-item">
-            <img class="slider-img" src="" alt="Палка для селфи">
+            <p class="slider-description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и 
+              соблюдать диету.
+            </p>
+            <a class="link" href="#">Подробнее</a>  
+            <!-- Характеристики товара -->
+            <table class="slider-specifications">
+              <caption class="visually-hidden">Технические характеристики товара</caption>              
+              <tr class="slider-specifications-meaning">
+                <td>48 часов</td>                
+              </tr>              
+              <tr class="slider-specifications-term">
+                <td>Без подзарядки</td>                
+              </tr>             
+            </table>
+          </div>
+          <div class="slider-item">  
+            <img class="slider-img" src="" alt="Палка для селфи">           
+            <h3 class="slider-title">Делай селфи, как Бен Стиллер!</h3>
+            <p class="slider-description">
+              Самая длинная палка для селфи доступна в нашем магазине. 
+              Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+            </p>
+            <a class="link" href="#">Подробнее</a>  
+            <!-- Характеристики товара -->
+            <table class="slider-specifications">
+              <caption class="visually-hidden">Технические характеристики товара</caption>              
+              <tr class="slider-specifications-meaning">
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>              
+              <tr class="slider-specifications-term">
+                <td>Длина палки</td>
+                <td>Вес палки</td>
+                <td>Материал</td>
+              </tr>             
+            </table>
+          </div>
+        </div> 
+        <!-- Переключатели фото внутри одного слайда    -->
+        <div class="slider-button-list"> 
+          <div class="slider-button-item">                     
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущее фото</span>
             </button>
+          </div>
+          <div class="slider-button-item"> 
             <button class="slider-button slider-next" type="button">
               <span class="visually-hidden">Следующее фото</span>
             </button>
-            <span>03</span>
-            <h3 class="slider-title">Делай селфи, как Бен Стиллер!</h3>
-              <p class="slider-description">
-                Самая длинная палка для селфи доступна в нашем магазине. 
-                Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-              </p>
-              <a class="link" href="#">Подробнее</a>  
-              <!-- Характеристики товара -->
-              <dl class="slider-specifications">
-                <dt class="slider-specifications-item">Длина палки</dt>
-                  <dd>8,5 м</dd>
-                <dt class="slider-specifications-item">Вес палки</dt>
-                  <dd>5 кг</dd>
-                <dt class="slider-specifications-item">Материал</dt>
-                  <dd>Карбон</dd>
-              </dl>            
-          </li>         
-        </ul>
+          </div>
+        </div>
         <!-- Пагинация слайдера -->
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
+        <div class="slider-pagination">
+          <div class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current" type="button">
               <span class="visually-hidden">1 фото</span>
             </button>
-          </li>
-          <li class="slider-pagination-item">
+          </div>
+          <div class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
               <span class="visually-hidden">2 фото</span>
             </button>
-          </li>
-          <li class="slider-pagination-item">
+          </div>
+          <div class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
               <span class="visually-hidden">3 фото</span>
             </button>
-          </li>
-        </ol>
+          </div>
+        </div>
       </section>
       <!-- Раздел с категориями -->
       <section class="categories">
         <h2 class="visually-hidden">Категории товаров</h2>
-        <ul class="categories-list">
-          <!-- У каждой li есть картинка. Мне кажется, что это декоративные изображения, они, скорее, как
-          вспомогательные, не несущие в себе прямого смысла и содержания, а просто иллюстрируют блок. Но
-          я сомневаюсь -->
+        <ul class="categories-list">          
           <li class="categories-item">
             <a class="categories-link">
               <b>Виртуальная реальность</b>
@@ -218,7 +219,7 @@
       <!-- Блок с услугами -->
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
-        <!-- Нумерованный список - потому что (по аналогии с кнопками слайдера) каждая кнопка привязана к 
+        <!-- Нумерованный список - потому что каждая кнопка привязана к 
         определенному описанию -->
         <ol class="services-tab-list">
           <li class="services-tab-item">
@@ -249,10 +250,10 @@
           </li>
         </ul>
       </section>
-      <!-- Раздел с кнопкой доставки под заказ -->
-      <section class="order">
+      <!-- Раздел с предложением -->
+      <section class="banner">
         <h2 class="visually-hidden">Заказ редкого товара</h2>
-        <button class="order-button">Доставим редкий товар под заказ<span>i</span></button>
+        <button class="banner-button">Доставим редкий товар под заказ<span>i</span></button>
       </section>
       <!-- Раздел о компании -->
       <section class="about">
@@ -307,8 +308,11 @@
         </form>
       </section>
     </main>
+    <!-- Футер -->
     <footer class="page-footer">
-      <img class="logo" src="" alt="">
+      <a href="https://htmlacademy.ru/">
+        <img class="logo" src="" alt="Логотип магазина «Девайс»">
+      </a>
       <p class="footer-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       <ul class="footer-navigation">
         <li class="footer-navigation-item">
