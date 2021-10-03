@@ -1,0 +1,80 @@
+/* Раздел с категориями */
+.categories-item {
+  background-repeat: no-repeat;
+}
+
+.categories-item:first-child {
+  background-image: url('../img/main-index/virtual-reality.svg');
+}
+
+.categories-item:nth-child(2) {
+  background-image: url('../img/main-index/monopods.svg');
+  background-repeat: no-repeat;
+}
+
+.categories-item:nth-child(3) {
+  background-image: url('../img/main-index/action-cameras.svg');
+  background-repeat: no-repeat;
+}
+
+.categories-item:nth-child(4) {
+  background-image: url('../img/main-index/fitnes-bracelet.svg');
+  background-repeat: no-repeat;
+}
+
+.categories-item:nth-child(5) {
+  background-image: url('../img/main-index/clever-watch.svg');
+  background-repeat: no-repeat;
+}
+
+.categories-item:last-child {
+  background-image: url('../img/main-index/quadrocopters.svg');
+  background-repeat: no-repeat;
+}
+
+/* Раздел с услугами */
+.services-item {
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.services-item:first-child {
+  background-image: url('../img/main-index/delivery-tab.svg');
+}
+
+.services-item:nth-child(2) {
+  background-image: url('../img/main-index/warranty.svg');
+}
+
+.services-item:last-child {
+  background-image: url('../img/main-index/credit.svg');
+}
+
+/* Раздел с предложением */
+.banner { 
+  background-image: url('../img/main-index/delivery.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+/* Футер */
+
+/* Соц.сети */
+.footer-social-item {
+  background-repeat: no-repeat;
+}
+
+.footer-social-item:first-child {
+  background-image: url('../img/icons/facebook.svg');
+}
+
+.footer-social-item:nth-child(2) {
+  background-image: url('../img/icons/instagram.svg');
+}
+
+.footer-social-item:last-child {
+  background-image: url('../img/icons/twitter.svg');
+}
+
+
+

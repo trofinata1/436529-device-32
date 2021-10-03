@@ -10,7 +10,7 @@
     <div class="header-wrapper">
       <!-- Логотип -->
       <a href="https://htmlacademy.ru/">
-        <img class="logo" src="" alt="Логотип магазина «Девайс»">
+        <img class="logo" src="img/header/header-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
       </a>
       <!-- Блок с поиском, авторизацией и спецссылками -->
       <div class="header-special-wrapper">
@@ -129,44 +129,43 @@
         <!-- Вопрос: этот фильтр лучше оставить списком ul или переделать в div? -->
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Цвет</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">              
-              <input class="catalog-filter-input" id="black-color" type="checkbox" name="black" checked>                
-              <label for="black-color" class="catalog-filter-label">Черный</label>              
-            </li>
-            <li class="catalog-filter-item">              
-              <input class="catalog-filter-input" id="white-color" type="checkbox" name="white" checked>                
-              <label for="black-color" class="catalog-filter-label">Белый</label>              
-            </li>
-            <li class="catalog-filter-item">              
-              <input class="catalog-filter-input" id="blue-color" type="checkbox" name="blue">                
-              <label for="black-color" class="catalog-filter-label">Синий</label>              
-            </li>
-            <li class="catalog-filter-item">              
-              <input class="catalog-filter-input" id="red-color" type="checkbox" name="red">                
-              <label for="black-color" class="catalog-filter-label">Красный</label>              
-            </li>
-            <li class="catalog-filter-item">              
-              <input class="catalog-filter-input" id="pink-color" type="checkbox" name="pink">                
-              <label for="black-color" class="catalog-filter-label">Розовый</label>              
-            </li>            
-          </ul>
+            <div class="catalog-filter-list">              
+              <p class="inpur-wrapper"> 
+                <input class="catalog-filter-input" id="black-color" type="checkbox" name="black" checked>                
+                <label for="black-color" class="catalog-filter-label">Черный</label>              
+              </p>
+              <p class="inpur-wrapper">   
+                <input class="catalog-filter-input" id="white-color" type="checkbox" name="white" checked>                
+                <label for="black-color" class="catalog-filter-label">Белый</label>              
+              </p>              
+              <p class="inpur-wrapper">    
+                <input class="catalog-filter-input" id="blue-color" type="checkbox" name="blue">                
+                <label for="black-color" class="catalog-filter-label">Синий</label>              
+              </p>              
+              <p class="inpur-wrapper">    
+                <input class="catalog-filter-input" id="red-color" type="checkbox" name="red">                
+                <label for="black-color" class="catalog-filter-label">Красный</label>              
+              </p>              
+              <p class="inpur-wrapper">    
+                <input class="catalog-filter-input" id="pink-color" type="checkbox" name="pink">                
+                <label for="black-color" class="catalog-filter-label">Розовый</label>              
+              </p>            
+            </div>
         </fieldset>
-        <!-- Фильтр Bluetooth -->
-        <!-- ВОПРОС: Этот фильтр лучше оставить списком ul или переделать в div? -->
+        <!-- Фильтр Bluetooth -->        
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Bluetooth</legend>        
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">              
+          <div class="catalog-filter-list">
+            <p class="input-wrapper">              
               <input class="catalog-filter-input" id="with_bluetooth" type="radio" name="bluetooth" value="yes" 
               checked>                
               <label for="with_bluetooth" class="catalog-filter-label">Есть</label>             
-            </li>
-            <li class="catalog-filter-item">              
+            </p>
+            <p class="input-wrapper">              
               <input class="catalog-filter-input" id="without_bluetooth" type="radio" name="bluetooth" value="no">                
               <label for="without_bluetooth" class="catalog-filter-label">Нет</label>              
-            </li>          
-          </ul>
+            </p>          
+          </div>
         </fieldset>
         <button class="button" type="submit">Показать</button>
         </form>
@@ -195,30 +194,33 @@
           <h2 class="visually-hidden">Товары</h2>
           <div class="product-card">          
             <a class="product-card-link img-link" href="#">
-              <img class="product-card-image" src="" alt="Любительская селфи-палка">
+              <img class="product-card-image" src="img/main-catalog/amateur-selfie-stick.png" 
+              alt="Любительская селфи-палка." width="360" height="380">
             </a>
             <a class="link product-card-link" href="#">Подробнее</a>
-            <a class="product-card-link title-link">
+            <a class="product-card-link title-link" href="#">
               <h4 class="product-card-title">Любительская селфи-палка</h4>
             </a>          
             <p class="product-card-price"><b>500 <span>₽</span></b></p>                     
           </div>
           <div class="product-card">          
             <a class="product-card-link img-link" href="#">
-              <img class="product-card-image" src="" alt="Профессиональная селфи-палка">
+              <img class="product-card-image" src="img/main-catalog/professional-selfie-stick.png" 
+              alt="Профессиональная селфи-палка." width="360" height="380">
             </a>
             <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
-            <a class="product-card-link title-link">
+            <a class="product-card-link title-link" href="#">
               <h4 class="product-card-title">Профессиональная селфи-палка</h4>
             </a>          
             <p class="product-card-price"><b>1 500 <span>₽</span></b></p>                      
           </div>
           <div class="product-card">          
             <a class="product-card-link img-link" href="#">
-              <img class="product-card-image" src="" alt="Непотопляемая селфи-палка">
+              <img class="product-card-image" src="img/main-catalog/unsinkable-selfie-stick.png" 
+              alt="Непотопляемая селфи-палка." width="360" height="380">
             </a>
             <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
-            <a class="product-card-link title-link">
+            <a class="product-card-link title-link" href="#">
               <h4 class="product-card-title">Непотопляемая селфи-палка</h4>
             </a>          
             <p class="product-card-price"><b>2 500 <span>₽</span></b></p>                     
@@ -226,10 +228,11 @@
           <div class="product-card"> 
             <span class="product-card-mark">new</span>         
             <a class="product-card-link img-link" href="#">
-              <img class="product-card-image" src="" alt="Селфи-палка «Следуй за мной»">
+              <img class="product-card-image" src="img/main-catalog/follow-selfie-stick.png" 
+              alt="Селфи-палка «Следуй за мной»." width="360" height="380">
             </a>
             <a class="visually-hidden link product-card-link" href="#">Подробнее</a>
-            <a class="product-card-link title-link">
+            <a class="product-card-link title-link" href="#">
               <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
             </a>          
             <p class="product-card-price"><b>4 900 <span>₽</span></b></p>                     
@@ -265,7 +268,7 @@
   <!-- Футер -->
   <footer class="page-footer">
     <a href="https://htmlacademy.ru/">
-      <img class="logo" src="" alt="Логотип магазина «Девайс»">
+      <img class="logo" src="img/footer/footer-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
     </a>
     <p class="footer-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
     <ul class="footer-navigation">
@@ -298,7 +301,7 @@
       </li>
     </ul>
     <a class="author-link" href="https://htmlacademy.ru/">
-      <img class="author-img" src="" alt="Логотип разработчика сайта">
+      <img class="author-img" src="img/footer/academy-logo.svg" alt="Логотип разработчика сайта." width="115" height="34">
     </a>
   </footer>
 </body>
