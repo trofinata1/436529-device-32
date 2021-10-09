@@ -36,59 +36,84 @@
   font-display: swap;
 }
 
-/* Базовые стили */
-body {
-  font-family: Rubik, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
-
-  background-color: #FFFFFF;
+/* Переменные, цвета */
+:root {
+  /* Основные цвета */
+  --color-black: #000000;
+  --color-white: #FFFFFF; 
+  --color-dark: #444444;
+  --color-light: #f0f0f0; 
+  --color-light-gray: #EBEBEB;   
+  /* Дополнительные цвета */
+  --color-yellow: #FFE17F;
+  --color-bright-yellow: #ffc700;
 }
 
-.link {
+/* Базовые стили */
+body {
+  font-family: Rubik, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-dark); 
+
+  background-color: var(--color-white); 
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.button {
   font-family: Raleway, Arial, sans-serif;
+  font-size: 18px;
   line-height: 21px;
   text-align: center;  
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.2em;
-  color: #000000;  
+  letter-spacing: 3.5px;
+  color: var(--color-black);  
     
-  background: linear-gradient(transparent 7px, #FFE17F 7px 15px,transparent 15px);
+  background: linear-gradient(transparent 7px, var(--color-yellow) 7px 15px, transparent 15px);
   border: none;
 
   cursor: pointer;  
 }
 
-.button {
-  font-family: Raleway, Arial, sans-serif;
-  text-align: center;
+.link {
+  text-decoration: none;
 
-  border: none;
+  color: var(--color-black); 
 
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .section-title {
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
-  color: #000000;
+  color: var(--color-black); 
 }
 
 /* Хедер */
 .page-header {
-  color: #000000;
+  color: var(--color-black); 
 
-  background: linear-gradient(#ffffff 23px, #FFE17F 23px);
+  background: linear-gradient(var(--color-white) 23px, var(--color-yellow) 23px);
 }
 
 .user-menu-link {
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-  color: #000000;   
+  color: var(--color-black);    
+}
+
+.authorization-action {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation-link {
@@ -97,93 +122,125 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3.6px;
-  color: #000000;  
+  color: var(--color-black);   
 }
 
 .catalog-navigation-link {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
-  color: #000000;    
+  color: var(--color-black);     
 } 
 
 /* Главная страница */
 
 /* Раздел со слайдером */
 .slider {
-  background: linear-gradient(#FFE17F 150px, #FFFFFF 150px);
+  background: linear-gradient(var(--color-yellow) 150px, var(--color-white) 150px);
+}
+
+.slider {
+  counter-reset: slider-number;
+}
+
+.slider-item:before {
+  counter-increment: slider-number;
+  content: '0' counter(slider-number);
+
+  font-family: Rubik, Tahoma, sans-serif;
+  font-size: 180px;
+  font-weight: 800;
+  line-height: 30px;
+  text-align: right;
+
+  color: var(--color-black);  /* Пока задала черным, чтобы видно было цифру, потом поменяю на белый */
 }
 
 .slider-title {
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
-  color: #000000;  
+  color: var(--color-black);   
 }
 
 .slider-specifications-meaning {
   font-size: 36px;
-  color: #000000;  
+  color: var(--color-black);   
 }
 
 .slider-specifications-term {
   font-size: 16px;
-}   
+}  
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+
+  padding: 0;
+
+  background-image: none; /* Иначе наследуется градиент из .button  */
+  background-color: var(--color-white); 
+  border-radius: 100%;
+  border: 2px solid var(--color-black);   
+}
+
+.slider-pagination-button-current {
+  background-color: var(--color-black); 
+}
 
 /* Раздел с категориями */
-.categories-image { 
-  width: 160px;
+.categories-icon { 
+  width: 160px;   
 
-  text-align: center;  
-
-  background-color: #FFE17F;   
+  background-color: var(--color-yellow);     
 }
 
 .categories-title {
   font-family: Raleway, Arial, sans-serif;
   line-height: 24px;
   letter-spacing: -0.36px;
-  color: #000000;
+  color: var(--color-black); 
 }
 
 /* Раздел с услугами */
 .services {
-  background: linear-gradient(#FFFFFF 100px, #F0F0F0 100px);
+  background: linear-gradient(var(--color-white) 100px, var(--color-light) 100px);
 }
 
 .services-tab-link {
-  background: linear-gradient(transparent 7px, #FFC700 7px 15px, transparent 15px);
+  background: linear-gradient(transparent 7px, var(--color-bright-yellow) 7px 15px, transparent 15px);
 }
 
 .services-title {
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
-  color: #000000;
+  color: var(--color-black); 
 }
 
 /* Раздел с предложением */
 .banner {    
-  background-color: #F0F0F0;
+  background-color: var(--color-light);
 }
 
-.banner-image {
+.banner-icon {
   width: 125px;
 
   text-align: center;
       
-  background-color: #FFE17F; 
+  background-color: var(--color-yellow); 
 }
 
-.banner-button {
+.banner-text {
   font-family: Raleway, Arial, sans-serif;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 4px;
 }
 
-.banner-button span {
+.banner-text span {
   text-align: center;
   background: rgba(220, 220, 220, 0.5);  
   border-radius: 100%;
@@ -194,7 +251,7 @@ body {
 .delivery-companies-item {
   font-weight: 700;
   line-height: 20px;
-  color: #000000;
+  color: var(--color-black); 
 }
 
 /* Раздел с контактами */
@@ -208,19 +265,18 @@ body {
 }
 
 .contacts-link {
-  color: #444444;
+  color: var(--color-dark); 
 } 
 
 /* Раздел с подпиской */
 .newsletter {
-  background: #F0F0F0;
+  background: var(--color-light);
 }
 
 .newsletter-button {
-  font-family: Raleway, sans-serif;
-  font-weight: 800;  
-  font-size: 18px;
-  font-style: uppercase;
+  font-family: Raleway, Arial, sans-serif; 
+  
+  background-image: none;
   border: 3px solid rgba(0, 0, 0, 0.1);     
 }
 
@@ -240,37 +296,37 @@ body {
   font-size: 16px;
   line-height: 19px; 
   text-transform: uppercase; 
-  letter-spacing: 0.2em;   
-  color: #000000; 
+  letter-spacing: 3px;   
+  color: var(--color-black);  
 }
 
 .catalog-filter-title {
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: -0.02em;
-  color: #000000;
+  letter-spacing: -0.3px;
+  color: var(--color-black); 
 }
 
 .range-text {
   font-size: 15px;
   line-height: 18px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(136, 102, 102, 0.3);
 }
 
 .catalog-filter-label {
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: var(--color-black); 
 }
 
-.catalog-filter-link {
-  background: linear-gradient(#FFFFFF 7px, #FFC700 7px 15px, #FFFFFF 15px);
+.catalog-filter-link {   
+  background: linear-gradient(var(--color-white) 7px, var(--color-bright-yellow) 7px 15px, var(--color-white) 15px);
 }
 
 /* Карточки */
 .product-card-link {
-  background: linear-gradient(#FFFFFF 7px, #FFC700 7px 15px, #FFFFFF 15px);
+  background: linear-gradient(var(--color-white) 7px, var(--color-bright-yellow) 7px 15px, var(--color-white) 15px);
 }
 
 .product-img-link {
@@ -280,14 +336,14 @@ body {
 .product-card-title {
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: -0.02em;
-  color: #000000;  
+  letter-spacing: -0.3px;
+  color: var(--color-black);   
 }
 
 .product-card-price {
   line-height: 21px;
   text-align: right;
-  color: #444444;
+  color: var(--color-dark); 
 }
 
 .product-card-mark {
@@ -295,7 +351,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;  
-  letter-spacing: 0.2em;  
+  letter-spacing: 2px;  
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -304,14 +360,16 @@ body {
   line-height: 19px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.3px;
   
-  background-color: #ffffff;
+  background-image: none;
+  background-color: var(--color-white); 
+  border: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Пагинация */
 .pagination {
-  background-color: #EBEBEB;
+  background-color: var(--color-light-gray); 
 }
 
 .pagination-link {
@@ -325,19 +383,19 @@ body {
 .pagination-arrow {
   font-family: Raleway, Arial, sans-serif;   
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #000000;
+  letter-spacing: 3.3px;
+  color: var(--color-black); 
 }
 
 /* Футер */
 .page-footer {
-  background-color: #444444;
+  background-color: var(--color-dark); 
 }
 
 .footer-text {
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
+  color: var(--color-white); 
 }
 
 .footer-navigation-link {
@@ -346,18 +404,18 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.2em;
-  color: #ffffff;  
+  letter-spacing: 3.5px;
+  color: var(--color-white);   
 }
 
 .footer-tel {
   font-size: 16px;     
   text-decoration: none;
-  color: #ffffff; 
+  color: var(--color-white);  
 }
 
 .footer-social-link {
-  background-color: #FFFFFF;
+  background-color: var(--color-white); 
   opacity: 0.3;
 }
 
