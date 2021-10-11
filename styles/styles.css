@@ -46,11 +46,21 @@
   --color-light-gray: #EBEBEB;   
   /* Дополнительные цвета */
   --color-yellow: #FFE17F;
-  --color-bright-yellow: #ffc700;
+  --color-bright-yellow: #FFC700;
+  --color-decor-yellow: #FFC500;
 }
 
 /* Базовые стили */
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
   font-family: Rubik, Tahoma, sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -65,6 +75,11 @@ body {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.main-wrapper {
+  width: 1160px;
+  margin: 0 auto;   
 }
 
 .button {
@@ -92,6 +107,8 @@ body {
 }
 
 .section-title {
+  margin: 0;
+
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -100,9 +117,47 @@ body {
 
 /* Хедер */
 .page-header {
-  color: var(--color-black); 
+  margin-top: 17px;
 
+  color: var(--color-black);   
+}
+
+.page-header .main-wrapper {
   background: linear-gradient(var(--color-white) 23px, var(--color-yellow) 23px);
+}
+
+.header-wrapper {
+  width: 1034px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.header-menu-right-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%; 
+  margin-left: auto; 
+}
+
+.user-menu { 
+  display: flex;  
+}
+
+.user-special-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0;
+  margin-left: auto; 
+  padding: 0;
+
+  list-style-type: none;  
 }
 
 .user-menu-link {
@@ -112,8 +167,23 @@ body {
   color: var(--color-black);    
 }
 
+.authorization {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .authorization-action {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation {
+  padding-bottom: 17px;
+}
+
+.site-navigation-list { 
+  display: flex;  
+  align-items: center;
+  flex-wrap: wrap;  
 }
 
 .site-navigation-link {
@@ -125,6 +195,19 @@ body {
   color: var(--color-black);   
 }
 
+.header-menu-services-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 55%;
+}
+
+.catalog-navigation-list {
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-navigation-link {
   font-size: 16px;
   line-height: 18px;
@@ -132,20 +215,46 @@ body {
   color: var(--color-black);     
 } 
 
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 /* Главная страница */
+.main-container {
+  flex-grow: 1;
+}
 
 /* Раздел со слайдером */
-.slider {
+.slider-wrapper {
   background: linear-gradient(var(--color-yellow) 150px, var(--color-white) 150px);
 }
 
 .slider {
+  margin-bottom: 70px;
+
   counter-reset: slider-number;
 }
 
-.slider-item:before {
+.slider-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 560px;   
+}
+
+/* Номер слайда пока скрываю, чтобы не отвлекала, если я правильно понимаю, мы ее потом абсолютно спозиционируем */
+/* .slider-item:before {
   counter-increment: slider-number;
-  content: '0' counter(slider-number);
+  content: '0' counter(slider-number);  
 
   font-family: Rubik, Tahoma, sans-serif;
   font-size: 180px;
@@ -153,14 +262,20 @@ body {
   line-height: 30px;
   text-align: right;
 
-  color: var(--color-black);  /* Пока задала черным, чтобы видно было цифру, потом поменяю на белый */
-}
+  color: var(--color-black);  
+} */
 
 .slider-title {
+  margin: 0;
+
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: var(--color-black);   
+}
+
+.slider-text {
+  margin: 0;
 }
 
 .slider-specifications-meaning {
@@ -171,6 +286,14 @@ body {
 .slider-specifications-term {
   font-size: 16px;
 }  
+
+/* Я пока с ними ничего не делаю, кроме флексов, т.к. предполагаю, что будем их ставить абсолютным позиционированием */
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
 
 .slider-pagination-button {
   width: 12px;
@@ -189,13 +312,35 @@ body {
 }
 
 /* Раздел с категориями */
-.categories-icon { 
-  width: 160px;   
+.categories {
+  margin-bottom: 69px;
+}
 
-  background-color: var(--color-yellow);     
+.categories-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.categories-item {
+  width: 160px;
+}
+
+.categories-icon { 
+  width: 160px;
+  height: 160px;
+
+  margin-bottom: 33px;
+  
+  background-color: var(--color-yellow);      
 }
 
 .categories-title {
+  margin: 0;
+
   font-family: Raleway, Arial, sans-serif;
   line-height: 24px;
   letter-spacing: -0.36px;
@@ -204,34 +349,90 @@ body {
 
 /* Раздел с услугами */
 .services {
+  margin-bottom: 90px;
+  padding-top: 80px;
+  padding-bottom: 69px;
+
   background: linear-gradient(var(--color-white) 100px, var(--color-light) 100px);
+}
+
+.services-wrapper {
+  display: flex;
+}
+
+.services-tab-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 280px;
+  margin: 0;
+  margin-right: 120px;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .services-tab-link {
   background: linear-gradient(transparent 7px, var(--color-bright-yellow) 7px 15px, transparent 15px);
 }
 
+.services-list {
+  width: 694px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.services-item {
+  display: flex;  
+}
+
+.services-descr {
+  width: 497px;
+  margin-right: 61px;
+}
+
 .services-title {
+  margin: 0;
+
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: var(--color-black); 
 }
 
+.services-text {
+  margin: 0;
+}
+
 /* Раздел с предложением */
-.banner {    
+.banner {
+  margin-bottom: 97px;
+}
+
+.banner-wrapper {   
   background-color: var(--color-light);
 }
 
+.banner-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Я не понимаю, почему ширина оранжевой области становится 112px, а не 125 px, хотя задано 125 */
 .banner-icon {
   width: 125px;
-
-  text-align: center;
+  height: auto;  
       
   background-color: var(--color-yellow); 
 }
 
 .banner-text {
+  width: 100%;
+  margin: 0;
+
   font-family: Raleway, Arial, sans-serif;
   font-size: 20px;
   line-height: 23px;
@@ -247,6 +448,24 @@ body {
 }
 
 /* Раздел о компании */
+.company-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 87px;  
+}
+
+.about {
+  width: 560px;
+}
+
+.about-text {
+  margin: 0;
+}
+
+.delivery-companies {
+  margin: 0;
+  padding: 0;
+}
 
 .delivery-companies-item {
   font-weight: 700;
@@ -255,13 +474,26 @@ body {
 }
 
 /* Раздел с контактами */
+.contacts {
+  width: 560px;
+}
+
 .contacts-subtitle {
+  margin: 0;
+
   font-weight: 700;
   font-size: 24px;
 }
 
 .contacts-text {
+  margin: 0;
+
   font-style: normal;
+}
+
+.contacts-schedule {
+  margin: 0;
+  padding: 0;
 }
 
 .contacts-link {
@@ -270,7 +502,46 @@ body {
 
 /* Раздел с подпиской */
 .newsletter {
+  padding-top: 75px;
+  padding-bottom: 131px;
+
   background: var(--color-light);
+}
+
+.newsletter-descr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.newsletter-title {
+  width: 560px;
+}
+
+.newsletter-text {
+  width: 560px;
+  margin: 0;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-email {
+  width: 601px;
+  margin: 0;
+}
+
+.newsletter-text-note {
+  text-align: right;
+}
+
+.field {
+  width: 601px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .newsletter-button {
@@ -389,13 +660,36 @@ body {
 
 /* Футер */
 .page-footer {
+  padding-top: 62px;
+  padding-bottom: 61px;
   background-color: var(--color-dark); 
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-decor {
+  width: 80px;
+  height: 7px;
+  background-color: var(--color-decor-yellow);
 }
 
 .footer-text {
   font-size: 16px;
   line-height: 19px;
   color: var(--color-white); 
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 458px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-navigation-link {
@@ -412,6 +706,15 @@ body {
   font-size: 16px;     
   text-decoration: none;
   color: var(--color-white);  
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 149px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social-link {
