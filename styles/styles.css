@@ -57,7 +57,7 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;     
   min-height: 100%;
   margin: 0;
 
@@ -77,7 +77,7 @@ body {
   margin: -1px;
 }
 
-.main-wrapper {
+.wrapper {
   width: 1160px;
   margin: 0 auto;   
 }
@@ -116,45 +116,47 @@ body {
 }
 
 /* Хедер */
-.page-header {
-  margin-top: 17px;
-
+.page-header {  
   color: var(--color-black);   
 }
 
-.page-header .main-wrapper {
-  background: linear-gradient(var(--color-white) 23px, var(--color-yellow) 23px);
-}
+.page-header .wrapper {
+  padding-bottom: 150px;
 
-.header-wrapper {
-  width: 1034px;
-  margin: 0 auto;
-}
+  background: linear-gradient(var(--color-white) 23px, var(--color-yellow) 23px);
+} 
 
 .logo-link {
   display: inline-block;
-  margin-bottom: 35px;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  padding-left: 60px;
 }
 
 .header-menu-right-wrapper {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  width: 50%; 
-  margin-left: auto; 
+  width: 50%;    
 }
 
 .user-menu { 
-  display: flex;  
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 17px;
+  padding-left: 60px;
+  padding-right: 60px; 
+  padding-bottom: 16px;
 }
 
 .user-special-list {
-  display: flex;
-  justify-content: space-between;
+  display: flex;  
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
-  width: 50%;
-  margin: 0;
-  margin-left: auto; 
+  flex-wrap: wrap;  
+  margin: 0;   
   padding: 0;
 
   list-style-type: none;  
@@ -169,6 +171,8 @@ body {
 
 .authorization {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -177,11 +181,15 @@ body {
 }
 
 .site-navigation {
+  padding-top: 15px;
   padding-bottom: 17px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .site-navigation-list { 
   display: flex;  
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;  
 }
@@ -197,10 +205,9 @@ body {
 
 .header-menu-services-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  width: 55%;
+  flex-wrap: wrap;  
 }
 
 .catalog-navigation-list {
@@ -217,8 +224,8 @@ body {
 
 .header-contacts {
   display: flex;
-  align-items: center;
-  margin-left: auto;
+  justify-content: flex-end;
+  align-items: center;  
 }
 
 /* Главная страница */
@@ -232,14 +239,14 @@ body {
 }
 
 .slider {
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 
   counter-reset: slider-number;
 }
 
 .slider-item {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -248,7 +255,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 560px;   
+  
+  padding-left: 40px;
 }
 
 /* Номер слайда пока скрываю, чтобы не отвлекала, если я правильно понимаю, мы ее потом абсолютно спозиционируем */
@@ -290,7 +298,7 @@ body {
 /* Я пока с ними ничего не делаю, кроме флексов, т.к. предполагаю, что будем их ставить абсолютным позиционированием */
 .slider-pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 80px;
 }
@@ -313,33 +321,38 @@ body {
 
 /* Раздел с категориями */
 .categories {
-  margin-bottom: 69px;
+  padding-bottom: 69px;
 }
 
 .categories-list {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;  
   padding: 0;
 
   list-style-type: none;
 }
 
 .categories-item {
-  width: 160px;
+  width: 13.79%;
+  margin-right: 40px;
+}
+
+.categories-item:nth-child(6n) {  
+  margin-right: 0;
 }
 
 .categories-icon { 
   width: 160px;
-  height: 160px;
-
-  margin-bottom: 33px;
+  height: 160px;  
   
   background-color: var(--color-yellow);      
 }
 
 .categories-title {
   margin: 0;
+  padding-top: 33px;
 
   font-family: Raleway, Arial, sans-serif;
   line-height: 24px;
@@ -348,9 +361,8 @@ body {
 }
 
 /* Раздел с услугами */
-.services {
-  margin-bottom: 90px;
-  padding-top: 80px;
+.services {  
+  padding-top: 69px;
   padding-bottom: 69px;
 
   background: linear-gradient(var(--color-white) 100px, var(--color-light) 100px);
@@ -358,6 +370,8 @@ body {
 
 .services-wrapper {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .services-tab-list {
@@ -365,10 +379,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 280px;
-  margin: 0;
-  margin-right: 120px;
-  padding: 0;
+  width: 24%;
+  margin: 0; 
+  margin-right: auto; 
+  padding: 0;    
 
   list-style-type: none;
 }
@@ -378,20 +392,21 @@ body {
 }
 
 .services-list {
-  width: 694px;
+  width: 66%;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 
   list-style-type: none;
 }
 
 .services-item {
-  display: flex;  
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
 }
 
 .services-descr {
-  width: 497px;
-  margin-right: 61px;
+  width: 58%;  
 }
 
 .services-title {
@@ -408,8 +423,8 @@ body {
 }
 
 /* Раздел с предложением */
-.banner {
-  margin-bottom: 97px;
+.banner {    
+  padding-top: 90px;
 }
 
 .banner-wrapper {   
@@ -451,11 +466,13 @@ body {
 .company-info-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 97px;
   padding-bottom: 87px;  
 }
 
 .about {
-  width: 560px;
+  width: 50%;
 }
 
 .about-text {
@@ -475,7 +492,7 @@ body {
 
 /* Раздел с контактами */
 .contacts {
-  width: 560px;
+  width: 50%;
 }
 
 .contacts-subtitle {
@@ -511,15 +528,16 @@ body {
 .newsletter-descr {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
 .newsletter-title {
-  width: 560px;
+  width: 50%;
 }
 
 .newsletter-text {
-  width: 560px;
+  width: 50%;
   margin: 0;
 }
 
@@ -528,7 +546,7 @@ body {
 }
 
 .newsletter-email {
-  width: 601px;
+  width: 75%;
   margin: 0;
 }
 
@@ -536,8 +554,8 @@ body {
   text-align: right;
 }
 
-.field {
-  width: 601px;
+.field {  
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -667,17 +685,21 @@ body {
 
 .footer-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .footer-decor {
   width: 80px;
   height: 7px;
+  margin-right: auto;
+
   background-color: var(--color-decor-yellow);
 }
 
 .footer-text {
+  margin-right: auto;
+
   font-size: 16px;
   line-height: 19px;
   color: var(--color-white); 
@@ -685,9 +707,8 @@ body {
 
 .footer-navigation {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-width: 458px;
+  justify-content: flex-start;
+  flex-wrap: wrap;  
   margin: 0;
   padding: 0;
 }
@@ -703,6 +724,8 @@ body {
 }
 
 .footer-tel {
+  margin-left: auto;
+
   font-size: 16px;     
   text-decoration: none;
   color: var(--color-white);  
@@ -710,9 +733,8 @@ body {
 
 .footer-social-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 149px;
+  justify-content: flex-start;
+  align-items: center;  
   margin: 0;
   padding: 0;
 }
@@ -720,6 +742,10 @@ body {
 .footer-social-link {
   background-color: var(--color-white); 
   opacity: 0.3;
+}
+
+.author-link {
+  margin-left: auto;
 }
 
 

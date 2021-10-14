@@ -9,73 +9,70 @@
     <!-- Хедер   -->
     <header class="page-header"> 
       <!-- Центровщик -->
-      <div class="main-wrapper">
-        <!-- Обертка для всех блоков в хедере -->
-        <div class="header-wrapper">
+      <div class="wrapper">        
           <!-- Логотип -->
-          <a class="link logo-link" href="#">
-            <img class="logo" src="img/logo/header-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
-          </a>
-          <!-- Блок с поиском, авторизацией и спецссылками -->
-          <div class="user-menu">
-            <!-- Поиск -->
-            <form class="search" action="https://echo.htmlacademy.ru/" method="get">            
-              <label for="search" class="visually-hidden">Поиск</label>
-              <input type="search" name="search" id="search" placeholder="Поиск по сайту"> 
-              <button type="submit">Поиск</button>
-            </form>
-            <!-- Авторизация -->
-            <div class="header-menu-right-wrapper">
-              <div class="authorization">
-                <a class="link user-menu-link" href="#">Войти</a>            
-              </div>
-              <!-- Спецссылки -->
-              <ul class="user-special-list">
-                <li class="user-special-item">
-                  <a class="user-menu-link" href="#">Сравнить</a>
-                </li>
-                <li class="user-special-item">              
-                  <span>2</span><a class="link user-menu-link" href="#">Корзина</a> 
-                </li>
-              </ul>
+        <a class="link logo-link" href="#">
+          <img class="logo" src="img/logo/header-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
+        </a>
+        <!-- Блок с поиском, авторизацией и спецссылками -->
+        <div class="user-menu">
+          <!-- Поиск -->
+          <form class="search" action="https://echo.htmlacademy.ru/" method="get">            
+            <label for="search" class="visually-hidden">Поиск</label>
+            <input type="search" name="search" id="search" placeholder="Поиск по сайту"> 
+            <button type="submit">Поиск</button>
+          </form>
+          <!-- Авторизация -->
+          <div class="header-menu-right-wrapper">
+            <div class="authorization">
+              <a class="link user-menu-link" href="#">Войти</a>            
             </div>
-          </div>
+            <!-- Спецссылки -->
+            <ul class="user-special-list">
+              <li class="user-special-item">
+                <a class="user-menu-link" href="#">Сравнить</a>
+              </li>
+              <li class="user-special-item">              
+                <span>2</span><a class="link user-menu-link" href="#">Корзина</a> 
+              </li>
+            </ul>
+          </div> 
+        </div>        
           <!-- Меню сайта -->
-          <nav class="site-navigation">
-            <div class="site-navigation-list">                          
-              <a class="link site-navigation-link" href="#">Каталог товаров</a>
-              <!-- Выпадающее меню каталога товаров -->
-              <ul class="visually-hidden catalog-navigation-list">
-                <li class="catalog-navigation-item">
-                  <a class="link catalog-navigation-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <!-- Ссылка на вторую страницу, которую размечаем -->
-                  <a class="link catalog-navigation-link" href="monopods.html">Моноподы для cелфи</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a class="link catalog-navigation-link" href="#">Экшн-камеры</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a class="link catalog-navigation-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a class="link catalog-navigation-link" href="#">Умные часы</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a class="link catalog-navigation-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul> 
-              <div class="header-menu-right-wrapper"> 
-                <div class="header-menu-services-wrapper">       
-                  <a class="link site-navigation-link" href="#">Доставка</a>
-                  <a class="link site-navigation-link" href="#">Гарантия</a>
-                </div>
-                <a class="link site-navigation-link header-contacts" href="#">Контакты</a>                   
-              </div>             
-            </div>
-          </nav>
-        </div>
+        <nav class="site-navigation">
+          <div class="site-navigation-list">                          
+            <a class="link site-navigation-link" href="#">Каталог товаров</a>
+            <!-- Выпадающее меню каталога товаров -->
+            <ul class="visually-hidden catalog-navigation-list">
+              <li class="catalog-navigation-item">
+                <a class="link catalog-navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <!-- Ссылка на вторую страницу, которую размечаем -->
+                <a class="link catalog-navigation-link" href="monopods.html">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="link catalog-navigation-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="link catalog-navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="link catalog-navigation-link" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a class="link catalog-navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul> 
+            <div class="header-menu-right-wrapper"> 
+              <div class="header-menu-services-wrapper">       
+                <a class="link site-navigation-link" href="#">Доставка</a>
+                <a class="link site-navigation-link" href="#">Гарантия</a>
+              </div>
+              <a class="link site-navigation-link header-contacts" href="#">Контакты</a>                   
+            </div>             
+          </div>
+        </nav>        
       </div>
     </header>
     <!-- Главная часть -->
@@ -83,7 +80,7 @@
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
       <!-- Раздел со слайдером -->
       <section class="slider">   
-          <div class="main-wrapper slider-wrapper">           
+          <div class="wrapper slider-wrapper">           
           <h2 class="visually-hidden">Популярные товары</h2>        
           <!-- Блок с самими слайдами, т.е. с основной информацией на слайдах -->
           <div class="slider-list"> 
@@ -110,15 +107,16 @@
                 </table> 
               </div>
             </div>
-            <div class="visually-hidden slider-item"> 
+            <!-- Я эти два слайда пока уберу, т.к. они создают небольшую полосу прокрутки, хоть у них 
+              был класс мшыгфддн
+              <div class="visually-hidden slider-item"> 
               <img class="slider-img" src="img/slider/fitness-bracelet.png" alt="Фитнес-браслет." width="560" height="560">            
               <h3 class="slider-title">Худеем правильно!</h3>
               <p class="slider-text">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и 
                 соблюдать диету.
               </p>
-              <a class="button" href="#">Подробнее</a>  
-              <!-- Характеристики товара -->
+              <a class="button" href="#">Подробнее</a>             
               <table class="slider-specifications">
                 <caption class="visually-hidden">Технические характеристики товара</caption>              
                 <tr class="slider-specifications-meaning">
@@ -136,8 +134,7 @@
                 Самая длинная палка для селфи доступна в нашем магазине. 
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
               </p>
-              <a class="button" href="#">Подробнее</a>  
-              <!-- Характеристики товара -->
+              <a class="button" href="#">Подробнее</a>               
               <table class="slider-specifications">
                 <caption class="visually-hidden">Технические характеристики товара</caption>              
                 <tr class="slider-specifications-meaning">
@@ -151,7 +148,7 @@
                   <td>Материал</td>
                 </tr>             
               </table>
-            </div>
+            </div> -->
           </div> 
           <!-- Переключатели фото внутри одного слайда, пока не видны, потом тут будут иконки-стрелочки -->
           <div class="slider-button-list"> 
@@ -182,13 +179,13 @@
               <button class="button slider-pagination-button" type="button">
                 <span class="visually-hidden">3 слайд</span>
               </button>
-            </div>
+            </div> 
           </div>
         </div>
       </section>
       <!-- Раздел с категориями -->
       <section class="categories">
-        <div class="main-wrapper">
+        <div class="wrapper">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">          
             <li class="categories-item">
@@ -280,7 +277,7 @@
       </section>
       <!-- Блок с услугами -->
       <section class="services">
-        <div class="main-wrapper services-wrapper">
+        <div class="wrapper services-wrapper">
           <h2 class="visually-hidden">Услуги</h2>
           <!-- Нумерованный список - потому что каждая кнопка привязана к 
           определенному описанию -->
@@ -299,8 +296,8 @@
             <li class="services-item">
               <div class="services-descr">
                 <h3 class="services-title">Доставка</h3>
-                <p class="services-text">Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! 
-                  Ведь <br> мы неплохо заработаем, поднимая его на ваш этаж.</p>   
+                <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
+                  Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>   
               </div>         
               <svg width="136" height="164" viewBox="0 0 136 164" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M93.1329 38.7669C101.254 38.7669 108.078 33.2249 110.033 25.7179L115.5 26.5319C115.607 26.5479 115.715 26.5559 115.82 26.5559C116.871 26.5559 117.791 25.7859 117.951 24.7159C118.127 23.5379 117.312 22.4399 116.135 22.2649L110.594 21.4399C110.596 21.3939 110.598 21.3489 110.598 21.3019C110.598 21.1199 110.592 20.9399 110.584 20.7599C110.584 20.7599 110.133 14.2419 109.51 11.5229C108.889 8.80394 106.975 8.22694 106.975 8.22694C97.2049 6.01494 87.2029 5.78894 84.5999 5.78894C81.9969 5.78894 81.4419 7.12094 81.4419 7.12094L78.2919 12.1169L78.2819 12.1139C78.2059 12.2359 78.136 12.3589 78.063 12.4819L78.0359 12.5249C76.5339 15.1049 75.6689 18.1009 75.6689 21.3019C75.6679 30.9479 83.4879 38.7669 93.1329 38.7669Z" fill="white"/>
@@ -344,7 +341,7 @@
       </section>
       <!-- Раздел с предложением -->
       <section class="banner"> 
-        <div class="main-wrapper banner-wrapper">
+        <div class="wrapper banner-wrapper">
           <h2 class="visually-hidden">Заказ редкого товара</h2>
           <a class="link banner-link">      
             <svg class="banner-icon" width="47" height="31" viewBox="-40 0 125 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +361,7 @@
         </div>
       </section>
       <!-- Раздел о компании -->
-      <div class="main-wrapper company-info-wrapper">
+      <div class="wrapper company-info-wrapper">
         <section class="about">       
           <h2 class="section-title">О нас</h2>
           <p class="about-text">Огромный выбор гаджетов не оставит равнодушным <br> гика, который есть в каждом 
@@ -404,7 +401,7 @@
       </div>
       <!-- Раздел с подпиской на рассылку -->
       <section class="newsletter">
-        <div class="main-wrapper">
+        <div class="wrapper">
           <div class="newsletter-descr">
             <h2 class="section-title newsletter-title">Подпишитесь <br> на рассылку</h2>
             <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, <br> длительными тест-драйвами, 
@@ -424,7 +421,7 @@
     </main>
     <!-- Футер -->
     <footer class="page-footer">
-      <div class="main-wrapper footer-wrapper">
+      <div class="wrapper footer-wrapper">
         <a href="#">
           <img class="logo" src="img/logo/footer-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
         </a>
