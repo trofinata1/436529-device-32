@@ -117,6 +117,10 @@ body {
   color: var(--color-black); 
 }
 
+.pre-line-text {
+  white-space: pre-line;
+}
+
 /* Хедер */
 .page-header {  
   color: var(--color-black);   
@@ -607,22 +611,16 @@ body {
 
 /* Фильтр */
 .catalog-products { 
-  background-color: var(--color-catalog-filter);
-}
+  display: flex; 
 
-.catalog-products .wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  box-sizing: border-box;
-  width: 89%;
-  margin-right: 0;  
+  background: linear-gradient(to right, var(--color-catalog-filter) 33%, var(--color-white));
 }
 
 .form-title {   
   margin: 0;  
   padding-top: 25px; 
   padding-bottom: 25px;
+  padding-left: calc((100vw - 1160px) / 2 + 60px);
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 16px;
@@ -634,14 +632,10 @@ body {
   background-color: var(--color-catalog-form-title);
 }
 
-.form-title-left {
-  margin-left: -150px;
-  padding-left: 150px;
-} 
-
 .catalog-filter {
   padding-top: 71px;
   padding-right: 69px;
+  padding-left: calc((100vw - 1160px) / 2 + 60px);
 }
 
 .catalog-filter-title {
@@ -690,7 +684,7 @@ body {
   flex-wrap: wrap;
   padding-top: 69px;
   padding-left: 72px; 
-  padding-bottom: 77px;   
+  padding-bottom: 77px;     
 
   background-color: var(--color-white);
 }
@@ -736,7 +730,7 @@ body {
 .catalog-buttons {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 760px;
 }
 
 .button-download-more {
