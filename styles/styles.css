@@ -85,6 +85,14 @@ body {
 }
 
 .button {
+  display: block;
+  box-sizing: border-box;
+
+  padding-top: 14px;
+  padding-right: 38px;
+  padding-bottom: 16px;
+  padding-left: 38px;
+
   font-family: Raleway, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -94,13 +102,24 @@ body {
   letter-spacing: 3.5px;
   color: var(--color-black);  
     
-  background: linear-gradient(transparent 7px, var(--color-yellow) 7px 15px, transparent 15px);
+  background: linear-gradient(transparent 21px, var(--color-yellow) 21px 29px, transparent 29px);
   border: none;
 
   cursor: pointer;  
 }
 
+.button-bright {
+  padding-top: 9px;
+  padding-right: 15px;
+  padding-bottom: 11px;
+  padding-right: 15px;
+
+  background: linear-gradient(transparent 16px, var(--color-bright-yellow) 16px 24px, transparent 24px);
+}
+
 .link {
+  display: block;
+
   text-decoration: none;
 
   color: var(--color-black); 
@@ -127,9 +146,7 @@ body {
 }
 
 .page-header .wrapper {
-  padding-bottom: 150px;
-
-  background: linear-gradient(var(--color-white) 23px, var(--color-yellow) 23px);
+  background: linear-gradient(var(--color-white) 41px, var(--color-yellow) 41px);
 } 
 
 .catalog-header .wrapper {
@@ -138,8 +155,8 @@ body {
 
 .logo-link {
   display: inline-block;
-  padding-top: 17px;
-  padding-bottom: 18px;
+  margin-bottom: 17px;
+  padding-top: 17px;  
   padding-left: 60px;
 }
 
@@ -147,18 +164,16 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
-  width: 50%;    
+  flex-wrap: wrap;  
 }
 
 .user-menu { 
   display: flex; 
   justify-content: space-between;
-  align-items: center;
-  padding-top: 17px;
+  align-items: center; 
+  margin-bottom: 20px; 
   padding-left: 60px;
-  padding-right: 60px; 
-  padding-bottom: 16px;
+  padding-right: 41px;   
 }
 
 .user-special-list {
@@ -173,6 +188,11 @@ body {
 }
 
 .user-menu-link {
+  padding-top: 10px;
+  padding-right: 25px;  
+  padding-bottom: 10px;
+  padding-left: 42px;
+
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
@@ -184,17 +204,20 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  margin-right: 150px;
+}
+
+.catalog-header .authorization {
+  margin-right: 0;
 }
 
 .authorization-action {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation {
-  padding-top: 15px;
-  padding-bottom: 17px;
-  padding-left: 60px;
-  padding-right: 60px;
+.site-navigation {  
+  padding-left: 40px;
+  padding-right: 38px;
 }
 
 .site-navigation-list { 
@@ -205,6 +228,11 @@ body {
 }
 
 .site-navigation-link {
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
   font-family: Raleway, Arial, sans-serif;  
   line-height: 21px;
   text-transform: uppercase;
@@ -217,7 +245,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;    
+  margin-right: 40px;
 }
 
 .catalog-navigation-list {
@@ -257,15 +286,16 @@ body {
 .slider-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slider-descr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start;  
   
+  padding-top: 120px;
   padding-left: 40px;
 }
 
@@ -284,7 +314,8 @@ body {
 } */
 
 .slider-title {
-  margin: 0;
+  margin: 0; 
+  margin-bottom: 29px; 
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
@@ -293,7 +324,12 @@ body {
 }
 
 .slider-text {
-  margin: 0;
+  margin: 0; 
+  margin-bottom: 36px; 
+}
+
+.slider-button {
+  margin-bottom: 47px;
 }
 
 .slider-specifications-meaning {
@@ -302,8 +338,13 @@ body {
 }
 
 .slider-specifications-term {
-  font-size: 16px;
+  font-size: 16px; 
+  line-height: 45px; 
 }  
+
+.slider-specifications-cell {
+  padding-right: 13px;  
+}
 
 /* Я пока с ними ничего не делаю, кроме флексов, т.к. предполагаю, что будем их ставить абсолютным позиционированием */
 .slider-pagination {
@@ -362,7 +403,7 @@ body {
 
 .categories-title {
   margin: 0;
-  padding-top: 33px;
+  padding-top: 22px;
 
   font-family: Raleway, Arial, sans-serif;
   line-height: 24px;
@@ -373,38 +414,46 @@ body {
 /* Раздел с услугами */
 .services {  
   padding-top: 69px;
-  padding-bottom: 69px;
+  padding-bottom: 122px;
 
-  background: linear-gradient(var(--color-white) 100px, var(--color-light) 100px);
+  background: linear-gradient(var(--color-white) 113px, var(--color-light) 113px);
 }
 
 .services-wrapper {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .services-tab-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 24%;
   margin: 0; 
   margin-right: auto; 
-  padding: 0;    
+  padding: 0; 
+  padding-top: 25px;   
 
   list-style-type: none;
 }
 
 .services-tab-link {
-  background: linear-gradient(transparent 7px, var(--color-bright-yellow) 7px 15px, transparent 15px);
+  width: 160px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.services-tab-item {
+  margin-bottom: 20px;
 }
 
 .services-list {
   width: 66%;
-  margin: 0;
-  padding: 0;  
+  margin: 0;  
+  padding: 0; 
+  padding-top: 13px; 
 
   list-style-type: none;
 }
@@ -412,15 +461,16 @@ body {
 .services-item {
   display: flex; 
   justify-content: flex-start; 
-  align-items: center;
+  align-items: flex-start; 
 }
 
 .services-descr {
-  width: 58%;  
+  margin-right: 111px;
 }
 
 .services-title {
   margin: 0;
+  margin-bottom: 33px;  
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 50px;
@@ -430,6 +480,10 @@ body {
 
 .services-text {
   margin: 0;
+}
+
+.services-icon {
+ padding-top: 15px;
 }
 
 /* Раздел с предложением */
@@ -443,20 +497,17 @@ body {
 
 .banner-link {
   display: flex;
-  align-items: center;
+  align-items: center;   
 }
 
 /* Я не понимаю, почему ширина оранжевой области становится 112px, а не 125 px, хотя задано 125 */
-.banner-icon {
-  width: 125px;
-  height: auto;  
-      
+ .banner-icon {      
   background-color: var(--color-yellow); 
-}
+} 
 
 .banner-text {
-  width: 100%;
-  margin: 0;
+  width: 100%;  
+  margin: 0;  
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 20px;
@@ -476,25 +527,44 @@ body {
 .company-info-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 97px;
-  padding-bottom: 87px;  
+  padding-bottom: 72px;  
+}
+
+.company-info-button {  
+  width: 260px;
+  padding-right: 10px;
+  padding-left: 10px;    
 }
 
 .about {
-  width: 50%;
+  width: 53%;
+  padding-top: 49px;
+}
+
+.company-info-section-title {
+  margin-bottom: 46px;
 }
 
 .about-text {
   margin: 0;
+  margin-bottom: 32px;
 }
 
 .delivery-companies {
   margin: 0;
   padding: 0;
+  padding-top: 42px;
+  padding-bottom: 38px;
+  padding-left: 32px;
+
+  list-style-type: none;
 }
 
 .delivery-companies-item {
+  margin-bottom: 20px;
+
   font-weight: 700;
   line-height: 20px;
   color: var(--color-black); 
@@ -503,10 +573,12 @@ body {
 /* Раздел с контактами */
 .contacts {
   width: 50%;
+  padding-top: 49px;
 }
 
 .contacts-subtitle {
   margin: 0;
+  margin-bottom: 16px;
 
   font-weight: 700;
   font-size: 24px;
@@ -514,18 +586,30 @@ body {
 
 .contacts-text {
   margin: 0;
+  margin-bottom: 30px;
 
   font-style: normal;
 }
 
 .contacts-schedule {
   margin: 0;
+  margin-bottom: 52px;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .contacts-link {
   color: var(--color-dark); 
 } 
+
+.contacts-address {
+  margin-bottom: 30px;
+}
+
+.contacts-address .contacts-text {
+  margin-bottom: 0;
+}
 
 /* Раздел с подпиской */
 .newsletter {
@@ -543,7 +627,8 @@ body {
 }
 
 .newsletter-title {
-  width: 50%;
+  width: 53%;
+  margin-bottom: 15px;
 }
 
 .newsletter-text {
@@ -553,14 +638,20 @@ body {
 
 .newsletter-form {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .newsletter-email {
-  width: 75%;
+  width: 51.5%;
   margin: 0;
 }
 
 .newsletter-text-note {
+  width: auto;
+  margin-left: auto;
+  padding-bottom: 10px;
+
   text-align: right;
 }
 
@@ -582,13 +673,14 @@ body {
 /* Страница каталога */
 .inner-header {
   padding-top: 37px;
-  padding-bottom: 49px;
-  padding-left: 60px;
+  padding-bottom: 43px;
+  padding-left: 47px;
   padding-right: 60px;
 }
 
 .inner-header-title {
-  margin-bottom: 14px;
+  margin-bottom: 17px;
+  padding-left: 13px;
 }
 
 /* Хлебные крошки */
@@ -603,6 +695,12 @@ body {
 }
 
 .breadcrumbs-link {
+  margin-right: 8px;
+  padding-top: 5px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
@@ -611,16 +709,20 @@ body {
 
 /* Фильтр */
 .catalog-products { 
-  display: flex; 
-
-  background: linear-gradient(to right, var(--color-catalog-filter) 33%, var(--color-white));
+  display: flex;
+  justify-content: start;     
 }
+
+.form-catalog-wrapper {
+  background-color: var(--color-catalog-filter);
+}
+  
 
 .form-title {   
   margin: 0;  
   padding-top: 25px; 
   padding-bottom: 25px;
-  padding-left: calc((100vw - 1160px) / 2 + 60px);
+  padding-left: calc((100vw - 1160px) / 2 + 50px);
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 16px;
@@ -634,8 +736,8 @@ body {
 
 .catalog-filter {
   padding-top: 71px;
-  padding-right: 69px;
-  padding-left: calc((100vw - 1160px) / 2 + 60px);
+  padding-right: 47px;
+  padding-left: calc((100vw - 1160px) / 2 + 60px);  
 }
 
 .catalog-filter-title {
@@ -658,14 +760,20 @@ body {
   color: var(--color-black); 
 }
 
-.catalog-filter-link {   
-  background: linear-gradient(var(--color-white) 7px, var(--color-bright-yellow) 7px 15px, var(--color-white) 15px);
+.filter-button {   
+  padding-right: 43px;
+  padding-left: 43px;
 }
+
+.cards-wrapper {
+  padding-bottom: 77px;
+} 
 
 .form-sort-wrapper {
   display: flex;
   justify-content: flex-start;
-  align-items: center;  
+  align-items: center; 
+  padding-right: calc((100vw - 1160px) / 2); 
   
   background-color: var(--color-light-gray);
 }
@@ -676,20 +784,26 @@ body {
   background-color: var(--color-light-gray);
 }
 
+.sorting-button-wrapper {
+  margin-left: auto;
+}
+
+.sorting-button {
+  background-image: none;
+}
+
 /* Карточки */
 .products {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 69px;
-  padding-left: 72px; 
-  padding-bottom: 77px;     
-
-  background-color: var(--color-white);
+  padding-left: 72px;    
 }
 
 .product-card {
+  margin-bottom: 45px;
   margin-left: 40px;
 }
 
@@ -705,7 +819,20 @@ body {
   text-decoration: none;
 }
 
-.product-card-title {
+.product-card-image {
+  margin-bottom: 25px;
+}
+
+.product-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.product-card-title {   
+  margin: 0;  
+
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.3px;
@@ -713,6 +840,8 @@ body {
 }
 
 .product-card-price {
+  margin: 0;  
+
   line-height: 21px;
   text-align: right;
   color: var(--color-dark); 
@@ -729,11 +858,14 @@ body {
 
 .catalog-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;       
   width: 760px;
+  padding-left: 72px;
 }
 
 .button-download-more {
+  margin-bottom: 51px;
+  
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -747,10 +879,22 @@ body {
 
 /* Пагинация */
 .pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding-top: 4px;
+  padding-bottom: 4px;
+
   background-color: var(--color-light-gray); 
 }
 
 .pagination-link {
+  padding-top: 3px;
+  padding-right: 6px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+
   font-size: 16px;
   line-height: 19px;  
   text-align: center;
@@ -759,10 +903,27 @@ body {
 }
 
 .pagination-arrow {
+  padding-top: 22px;
+  padding-right: 27px;
+  padding-bottom: 19px;
+  padding-left: 27px;
+
   font-family: Raleway, Arial, sans-serif;   
   text-transform: uppercase;
   letter-spacing: 3.3px;
   color: var(--color-black); 
+}
+
+.pagination-prev {
+  margin-right: 180px;
+}
+
+.pagination-next {
+  margin-left: auto;
+}
+
+.pagination-number {
+  margin-right: 12px;
 }
 
 /* Футер */
@@ -772,22 +933,27 @@ body {
   background-color: var(--color-dark); 
 }
 
+.footer-link {
+  margin-bottom: 12px;
+}
+
 .footer-row {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 30px; 
 }
 
 .footer-decor {
   width: 80px;
   height: 7px;
-  margin-right: auto;
+  margin-right: 425px;
 
   background-color: var(--color-decor-yellow);
 }
 
 .footer-text {
-  margin-right: auto;
+  margin-right: 103px;
 
   font-size: 16px;
   line-height: 19px;
@@ -797,12 +963,18 @@ body {
 .footer-navigation {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;  
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 .footer-navigation-link {
+  padding-top: 14px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
   font-family: Raleway, Arial, sans-serif;
   line-height: 21px;
   text-align: center;
@@ -829,8 +1001,24 @@ body {
 }
 
 .footer-social-link {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;  
+
   background-color: var(--color-white); 
   opacity: 0.3;
+  border-radius: 50%;
+}
+
+.footer-social-item {
+  margin-right: 15px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
 }
 
 .author-link {
