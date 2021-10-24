@@ -2,7 +2,6 @@
 
 /* Подключение шрифта Raleway */
 
-
 @font-face {
   font-family: Raleway;
   font-style: normal;
@@ -50,6 +49,8 @@
   --color-yellow: #FFE17F;
   --color-bright-yellow: #FFC700;
   --color-decor-yellow: #FFC500;
+  /* Размеры */
+  --width-content: 1160px;
 }
 
 /* Базовые стили */
@@ -85,18 +86,23 @@ body {
 }
 
 .button {
-  display: block;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  min-width: 220px;
+  min-height: 50px;
 
-  padding-top: 14px;
-  padding-right: 38px;
-  padding-bottom: 16px;
-  padding-left: 38px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;  
+  text-align: center;   
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3.5px;
@@ -109,16 +115,24 @@ body {
 }
 
 .button-bright {
-  padding-top: 9px;
-  padding-right: 15px;
-  padding-bottom: 11px;
-  padding-right: 15px;
+  min-width: 160px;
+  min-height: 40px;
 
   background: linear-gradient(transparent 16px, var(--color-bright-yellow) 16px 24px, transparent 24px);
 }
 
 .link {
-  display: block;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  min-width: 117px;
+  min-height: 40px;
+  padding-top: 5px;
+  padding-right: 5px;  
+  padding-bottom: 5px;
+  padding-left: 5px;
 
   text-decoration: none;
 
@@ -164,7 +178,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+  width: 50%;  
 }
 
 .user-menu { 
@@ -188,11 +203,6 @@ body {
 }
 
 .user-menu-link {
-  padding-top: 10px;
-  padding-right: 25px;  
-  padding-bottom: 10px;
-  padding-left: 42px;
-
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
@@ -204,11 +214,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: 150px;
-}
-
-.catalog-header .authorization {
-  margin-right: 0;
+  margin-right: auto;
 }
 
 .authorization-action {
@@ -228,10 +234,8 @@ body {
 }
 
 .site-navigation-link {
-  padding-top: 16px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-left: 20px;
+  min-width: 263px;
+  min-height: 50px;
 
   font-family: Raleway, Arial, sans-serif;  
   line-height: 21px;
@@ -246,7 +250,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;    
-  margin-right: 40px;
+  margin-right: auto;
+}
+
+.header-menu-services-wrapper .link {
+  min-width: 165px;
 }
 
 .catalog-navigation-list {
@@ -262,9 +270,7 @@ body {
 } 
 
 .header-contacts {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;  
+  min-width: 165px;   
 }
 
 /* Главная страница */
@@ -385,13 +391,21 @@ body {
   list-style-type: none;
 }
 
-.categories-item {
+.categories-item {  
   width: 13.79%;
   margin-right: 40px;
 }
 
 .categories-item:nth-child(6n) {  
   margin-right: 0;
+}
+
+.categories-link {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  min-height: 253px;
+  padding: 0;
 }
 
 .categories-icon { 
@@ -439,13 +453,13 @@ body {
   list-style-type: none;
 }
 
-.services-tab-link {
-  width: 160px;
+.services-tab-link {  
   padding-left: 5px;
   padding-right: 5px;
 }
 
 .services-tab-item {
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -465,7 +479,7 @@ body {
 }
 
 .services-descr {
-  margin-right: 111px;
+  margin-right: auto;
 }
 
 .services-title {
@@ -495,9 +509,9 @@ body {
   background-color: var(--color-light);
 }
 
-.banner-link {
-  display: flex;
-  align-items: center;   
+.banner-link {   
+  max-width: 100%; 
+  padding: 0;  
 }
 
 /* Я не понимаю, почему ширина оранжевой области становится 112px, а не 125 px, хотя задано 125 */
@@ -506,7 +520,7 @@ body {
 } 
 
 .banner-text {
-  width: 100%;  
+  width: 100%;   
   margin: 0;  
 
   font-family: Raleway, Arial, sans-serif;
@@ -533,13 +547,12 @@ body {
 }
 
 .company-info-button {  
-  width: 260px;
-  padding-right: 10px;
-  padding-left: 10px;    
+  min-width: 260px;      
 }
 
 .about {
-  width: 53%;
+  width: 50%;
+  margin-right: 35px;
   padding-top: 49px;
 }
 
@@ -627,8 +640,9 @@ body {
 }
 
 .newsletter-title {
-  width: 53%;
-  margin-bottom: 15px;
+  width: 50%;
+  margin-right: 35px;
+  margin-bottom: 15px;  
 }
 
 .newsletter-text {
@@ -643,7 +657,7 @@ body {
 }
 
 .newsletter-email {
-  width: 51.5%;
+  width: calc(50% + 35px);
   margin: 0;
 }
 
@@ -664,6 +678,9 @@ body {
 }
 
 .newsletter-button {
+  min-width: 260px;
+  min-height: 55px;
+
   font-family: Raleway, Arial, sans-serif; 
   
   background-image: none;
@@ -695,11 +712,9 @@ body {
 }
 
 .breadcrumbs-link {
-  margin-right: 8px;
-  padding-top: 5px;
-  padding-right: 12px;
-  padding-bottom: 6px;
-  padding-left: 13px;
+  min-width: 70px;
+  min-height: 35px;
+  margin-right: 8px;  
 
   font-size: 16px;
   line-height: 19px;
@@ -722,7 +737,7 @@ body {
   margin: 0;  
   padding-top: 25px; 
   padding-bottom: 25px;
-  padding-left: calc((100vw - 1160px) / 2 + 50px);
+  padding-left: calc((100vw - var(--width-content)) / 2 + 50px);
 
   font-family: Raleway, Arial, sans-serif;
   font-size: 16px;
@@ -737,7 +752,7 @@ body {
 .catalog-filter {
   padding-top: 71px;
   padding-right: 47px;
-  padding-left: calc((100vw - 1160px) / 2 + 60px);  
+  padding-left: calc((100vw - var(--width-content)) / 2 + 60px);  
 }
 
 .catalog-filter-title {
@@ -761,8 +776,8 @@ body {
 }
 
 .filter-button {   
-  padding-right: 43px;
-  padding-left: 43px;
+  min-width: 200px;
+  margin: 0 auto;
 }
 
 .cards-wrapper {
@@ -773,7 +788,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center; 
-  padding-right: calc((100vw - 1160px) / 2); 
+  padding-right: calc((100vw - var(--width-content)) / 2); 
   
   background-color: var(--color-light-gray);
 }
@@ -789,7 +804,7 @@ body {
 }
 
 .sorting-button {
-  background-image: none;
+  background: none;
 }
 
 /* Карточки */
@@ -816,7 +831,8 @@ body {
 }
 
 .product-img-link {
-  text-decoration: none;
+  flex-direction: column;
+  padding: 0;
 }
 
 .product-card-image {
@@ -828,6 +844,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .product-card-title {   
@@ -864,6 +881,7 @@ body {
 }
 
 .button-download-more {
+  max-width: 100%;
   margin-bottom: 51px;
   
   font-size: 16px;
@@ -883,17 +901,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap; 
-  padding-top: 4px;
-  padding-bottom: 4px;
+  min-height: 70px;
+  padding-left: 29px;
+  padding-right: 30px;  
 
   background-color: var(--color-light-gray); 
 }
 
 .pagination-link {
-  padding-top: 3px;
-  padding-right: 6px;
-  padding-bottom: 3px;
-  padding-left: 10px;
+  min-width: 38px;
+  min-height: 38px;
 
   font-size: 16px;
   line-height: 19px;  
@@ -903,11 +920,6 @@ body {
 }
 
 .pagination-arrow {
-  padding-top: 22px;
-  padding-right: 27px;
-  padding-bottom: 19px;
-  padding-left: 27px;
-
   font-family: Raleway, Arial, sans-serif;   
   text-transform: uppercase;
   letter-spacing: 3.3px;
@@ -915,7 +927,7 @@ body {
 }
 
 .pagination-prev {
-  margin-right: 180px;
+  margin-right: auto;
 }
 
 .pagination-next {
@@ -947,13 +959,13 @@ body {
 .footer-decor {
   width: 80px;
   height: 7px;
-  margin-right: 425px;
+  margin-right: auto;
 
   background-color: var(--color-decor-yellow);
 }
 
 .footer-text {
-  margin-right: 103px;
+  margin-right: auto;
 
   font-size: 16px;
   line-height: 19px;
@@ -966,20 +978,18 @@ body {
   align-items: center;
   flex-wrap: wrap;  
   margin: 0;
-  padding: 0;  
+  padding: 0; 
+  
+  list-style-type: none;
 }
 
 .footer-navigation-link {
-  padding-top: 14px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-left: 20px;
+  min-width: 165px;
+  min-height: 50px;
 
   font-family: Raleway, Arial, sans-serif;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
+  line-height: 21px;  
+  text-transform: uppercase; 
   letter-spacing: 3.5px;
   color: var(--color-white);   
 }
@@ -998,15 +1008,15 @@ body {
   align-items: center;  
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .footer-social-link {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;  
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;   
 
   background-color: var(--color-white); 
   opacity: 0.3;
@@ -1022,7 +1032,10 @@ body {
 }
 
 .author-link {
-  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;  
 }
 
 
