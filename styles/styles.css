@@ -378,13 +378,13 @@ body {
 
 /* Раздел с категориями */
 .categories {
-  padding-bottom: 69px;
+  padding-bottom: 49px;
 }
 
 .categories-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 13.79%);
+  gap: 40px; 
   margin: 0;  
   padding: 0;
 
@@ -392,8 +392,7 @@ body {
 }
 
 .categories-item {  
-  width: 13.79%;
-  margin-right: 40px;
+  width: 100%;  
 }
 
 .categories-item:nth-child(6n) {  
@@ -707,6 +706,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-left: 8px;
 
   list-style-type: none;
 }
@@ -729,6 +729,8 @@ body {
 }
 
 .form-catalog-wrapper {
+  max-width: 31%;
+
   background-color: var(--color-catalog-filter);
 }
   
@@ -749,7 +751,7 @@ body {
   background-color: var(--color-catalog-form-title);
 }
 
-.catalog-filter {
+.catalog-filter {  
   padding-top: 71px;
   padding-right: 47px;
   padding-left: calc((100vw - var(--width-content)) / 2 + 60px);  
@@ -781,13 +783,14 @@ body {
 }
 
 .cards-wrapper {
+  width: 69%;
   padding-bottom: 77px;
 } 
 
 .form-sort-wrapper {
   display: flex;
   justify-content: flex-start;
-  align-items: center; 
+  align-items: center;   
   padding-right: calc((100vw - var(--width-content)) / 2); 
   
   background-color: var(--color-light-gray);
@@ -809,21 +812,13 @@ body {
 
 /* Карточки */
 .products {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 40px;
+  row-gap: 45px;
+  margin-bottom: 44px;
   padding-top: 69px;
   padding-left: 72px;    
-}
-
-.product-card {
-  margin-bottom: 45px;
-  margin-left: 40px;
-}
-
-.product-card:nth-child(2n) {
-  margin-left: 0;
 }
 
 .product-card-link {
