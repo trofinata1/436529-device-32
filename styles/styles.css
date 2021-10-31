@@ -118,7 +118,8 @@ body {
   background: linear-gradient(transparent 21px, var(--color-yellow) 21px 29px, transparent 29px);
   border: none;
 
-  cursor: pointer;  
+  cursor: pointer;
+  transition: all 0.2s;  
 }
 
 .button-bright {
@@ -147,6 +148,7 @@ body {
 
   cursor: pointer;
   outline: transparent;
+  transition: all 0.2s;
 }
 
 .section-title {
@@ -206,6 +208,14 @@ body {
   outline: none; 
 }
 
+/* Отключение крестика по умолчанию в хроме внутри инпута */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+  display: none;
+}
+
 .search-input::placeholder {
   font-family: Rubik;
   font-size: 16px;
@@ -222,7 +232,8 @@ body {
   border: var(--active-stroke);  
 }
 
-.search-input:active {  
+.search-input:active,
+.search-input:not(:placeholder-shown) {  
   color: var(--color-black);
 
   border-color: var(--color-black);
@@ -232,11 +243,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
+  
   min-width: 160px;
   min-height: 40px;
 
-  font-family: Rubik;
+  font-family: Rubik, Tahoma, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -247,12 +258,13 @@ body {
   border: var(--black-stroke);
   border-radius: 0 20px 20px 0;
   opacity: 0; 
+  outline: transparent;
+
   cursor: auto;
 }
 
-.search:active .search-button {
-  opacity: 100%;
-  cursor: pointer;
+.search-input:not(:placeholder-shown) + .search-button {
+  opacity: 1;
 }
 
 .search-button:hover {
@@ -376,8 +388,7 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation {
-  padding-left: 40px;
+.site-navigation {  
   padding-right: 38px;  
 }
 
@@ -413,10 +424,48 @@ body {
   box-shadow: none;
 }
 
-.site-navigation-link-catalog {
+.catalog-link-wrapper {
   position: relative;
 
+  min-width: 313px;
+  min-height: auto;
+  padding-left: 50px;
+
   z-index: 3;
+}
+
+.catalog-link {
+  justify-content: start;
+  min-width: 100%;
+  padding-right: 0;
+  padding-left: 0;  
+}
+
+.catalog-link:focus .site-navigation-link-catalog {
+  box-shadow: var(--active-stroke-shadow);
+}
+
+.catalog-link:active {
+  opacity: 0.3;
+}
+
+.catalog-link:active .site-navigation-link-catalog {
+  box-shadow: none;
+}
+
+.site-navigation-link-catalog {
+  position: relative; 
+  
+  min-width: 261px;
+  min-height: 48px;
+
+  font-family: Raleway, Arial, sans-serif;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  border-radius: 25px;
+  outline: transparent;
 }
 
 .site-navigation-link-catalog::after {
@@ -425,7 +474,7 @@ body {
   box-sizing: border-box;
 
   position: absolute;
-  right: -52px;
+  right: -50px;
 
   display: flex;
   justify-content: center;
@@ -440,28 +489,24 @@ body {
   border-radius: 50%;  
 }
 
-.site-navigation-link-catalog:hover.site-navigation-link-catalog::after {
+.site-navigation-link-catalog:hover::after {
   background-image: url('../img/icons/minus.svg');
   border-color: var(--color-black);
-}
-
-.site-navigation-link-catalog:active {
-  opacity: 0.3;  
 }
 
 .header-menu-services-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;    
+  flex-wrap: wrap; 
+  flex-grow: 1;   
   margin-right: auto;
 }
 
 .catalog-navigation-list {
   position: absolute;
-  top: 193px;    
-  left: 50%;
-  transform: translateX(-50%);     
+  top: 58px;    
+  left: 0;      
 
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, max-content)) auto;
@@ -483,11 +528,11 @@ body {
   z-index: 2;
 }
 
-.site-navigation-link-catalog:hover + .catalog-navigation-list {
+.catalog-link-wrapper:hover .catalog-navigation-list {
   visibility: visible;
 }
 
-.site-navigation-link-catalog:focus + .catalog-navigation-list {
+.catalog-link-wrapper:focus .catalog-navigation-list {
   visibility: visible;
 }
 
@@ -542,7 +587,7 @@ body {
   background-color: var(--color-black);
 } 
 
-.site-navigation-link-services:hover.site-navigation-link-services::after {
+.site-navigation-link-services:hover::after {
   display: block;
 }
 
@@ -558,7 +603,7 @@ body {
   grid-column: 2 / -1;
 }
 
-.header-contacts {
+.header-contacts {  
   min-width: max-content;
   padding-right: 20px;
   padding-left: 20px;     
@@ -1630,7 +1675,7 @@ body {
   color: var(--color-bright-yellow); 
 }
 
-.footer-navigation-link:hover.footer-navigation-link::after {
+.footer-navigation-link:hover::after {
   display: block;
 }
 

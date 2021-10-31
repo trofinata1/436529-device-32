@@ -19,11 +19,8 @@
           <!-- Поиск -->
           <form class="search" action="https://echo.htmlacademy.ru/" method="get">            
             <label for="search" class="visually-hidden">Поиск</label>
-            <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту"> 
-            <!-- Кнопку сделала пока неактивной, т.к. в ней нет смысла, пока в поле нет текста.
-            Предполагаю, что потом с помощью JS можно будет убирать
-            с кнопки состояние неактивности, когда это нужно -->
-            <button class="button search-button" type="submit" disabled>Найти</button>
+            <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <button class="button search-button" type="submit">Найти</button>
           </form>
           <!-- Авторизация -->
           <div class="header-menu-right-wrapper">
@@ -45,7 +42,9 @@
         <nav class="site-navigation">
           <div class="site-navigation-list">
             <div class="catalog-link-wrapper">                          
-              <a class="link site-navigation-link site-navigation-link-catalog" href="#">Каталог товаров</a>
+              <a class="link catalog-link" href="#">
+                <span class="link site-navigation-link-catalog">Каталог товаров</span>
+              </a>
               <ul class="catalog-navigation-list">
                 <li class="catalog-navigation-item">
                   <a class="link catalog-navigation-link" href="#">Виртуальная реальность</a>
