@@ -5,11 +5,11 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body> 
+  <body>
     <!-- Хедер   -->
-    <header class="page-header"> 
+    <header class="page-header">
       <!-- Центровщик -->
-      <div class="wrapper">        
+      <div class="wrapper">
           <!-- Логотип -->
         <a class="link logo-link" href="#">
           <img class="logo" src="img/logo/header-logo.svg" alt="Логотип магазина «Девайс»." width="145" height="36">
@@ -17,7 +17,7 @@
         <!-- Блок с поиском, авторизацией и спецссылками -->
         <div class="user-menu">
           <!-- Поиск -->
-          <form class="search" action="https://echo.htmlacademy.ru/" method="get">            
+          <form class="search" action="https://echo.htmlacademy.ru/" method="get">
             <label for="search" class="visually-hidden">Поиск</label>
             <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <button class="button search-button" type="submit">Найти</button>
@@ -25,23 +25,53 @@
           <!-- Авторизация -->
           <div class="header-menu-right-wrapper">
             <div class="authorization">
-              <a class="link user-menu-link user-menu-link-login" href="#">Войти</a>            
+              <a class="link user-menu-link user-menu-link-login" href="#">Войти</a>
             </div>
             <!-- Спецссылки -->
             <ul class="user-special-list">
               <li class="user-special-item">
                 <a class="link user-menu-link user-menu-link-compare" href="#">Сравнить</a>
               </li>
-              <li class="user-special-item">              
-                <a class="link link user-menu-link user-menu-link-cart" href="#">Корзина</a> 
+              <li class="user-special-item user-special-item-cart">
+                <a class="link link user-menu-link user-menu-link-cart" href="#">Корзина</a>
+                <!-- Поповер с товарами в корзине -->
+                <div class="popover-cart">
+                  <div class="popover-cart-content">
+                    <h2 class="popover-title visually-hidden">Корзина</h2>
+                    <ul class="cart-list">
+                      <li class="cart-item">
+                        <a class="link cart-item-link" href="#">
+                          <!-- alt в img не заполняю, потому что сразу следом идет название товара. Если заполнить alt, то скринридеры два раза будут произносить одно и тоже. Было про это в статье в одной из домашек -->
+                          <img class="cart-item-img" src="img/products/amateur-selfie-stick.jpg" alt="." width="41" height="43">
+                          <p class="cart-item-title pre-line-text">Любительская
+                            селфи-палка</p>
+                        </a>
+                        <button class="cart-item-delite"></button>
+                      </li>
+                      <li class="cart-item">
+                        <a class="link cart-item-link" href="#">
+                          <!-- alt в img не заполняю, потому что сразу следом идет название товара. Если заполнить alt, то скринридеры два раза будут произносить одно и тоже. Было про это в статье в одной из домашек -->
+                          <img class="cart-item-img" src="img/products/professional-selfie-stick.jpg" alt="." width="41" height="43">
+                          <p class="cart-item-title">Профессиональная селфи-палка</p>
+                        </a>
+                        <button class="cart-item-delite"></button>
+                      </li>
+                    </ul>
+                    <div class="cart-total">
+                      <div class="cart-total-info cart-items-number">Товаров: 2</div>
+                      <div class="cart-total-info cart-items-amount">Сумма: 2000 ₽</div>
+                    </div>
+                    <a class="button cart-button" href="#" >Открыть корзину</a>
+                  </div>
+                </div>
               </li>
             </ul>
-          </div> 
-        </div>        
+          </div>
+        </div>
           <!-- Меню сайта -->
         <nav class="site-navigation">
           <div class="site-navigation-list">
-            <div class="catalog-link-wrapper">                          
+            <div class="catalog-link-wrapper">
               <a class="link catalog-link" href="#">
                 <span class="link site-navigation-link-catalog">Каталог товаров</span>
               </a>
@@ -49,7 +79,7 @@
                 <li class="catalog-navigation-item">
                   <a class="link catalog-navigation-link" href="#">Виртуальная реальность</a>
                 </li>
-                <li class="catalog-navigation-item">          
+                <li class="catalog-navigation-item">
                   <a class="link catalog-navigation-link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li class="catalog-navigation-item catalog-navigation-item-copter">
@@ -66,111 +96,111 @@
                   <a class="link catalog-navigation-link" href="#">Экшн-камеры</a>
                 </li>
               </ul>
-            </div>            
-            <div class="header-menu-right-wrapper"> 
-              <div class="header-menu-services-wrapper">       
+            </div>
+            <div class="header-menu-right-wrapper">
+              <div class="header-menu-services-wrapper">
                 <a class="link site-navigation-link site-navigation-link-services" href="#">Доставка</a>
-                <a class="link site-navigation-link site-navigation-link-services" href="#">Гарантия</a>
+                <a class="link site-navigation-link site-navigation-link-services warranty" href="#">Гарантия</a>
               </div>
-              <a class="link site-navigation-link site-navigation-link-services header-contacts" href="#">Контакты</a>                   
-            </div>             
+              <a class="link site-navigation-link site-navigation-link-services header-contacts" href="#">Контакты</a>
+            </div>
           </div>
-        </nav>        
-      </div>      
+        </nav>
+      </div>
     </header>
     <!-- Главная часть -->
     <main class="main-container main-index">
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
       <!-- Раздел со слайдером -->
-      <section class="slider">   
-          <div class="wrapper slider-wrapper">           
-          <h2 class="visually-hidden">Популярные товары</h2>        
+      <section class="slider">
+          <div class="wrapper slider-wrapper">
+          <h2 class="visually-hidden">Популярные товары</h2>
           <!-- Блок с самими слайдами, т.е. с основной информацией на слайдах -->
-          <div class="slider-list"> 
-            <div class="slider-item">              
-              <img class="slider-img" src="img/slider/quadrocopter.png" alt="Квадрокоптер." width="560" height="560">                                   
+          <div class="slider-list">
+            <div class="slider-item">
+              <img class="slider-img" src="img/slider/quadrocopter.png" alt="Квадрокоптер." width="560" height="560">
               <div class="slider-descr">
                 <h3 class="slider-title">Порхает как бабочка, жалит как пчела!</h3>
                 <p class="slider-text">
-                  Этот обычный, на первый взгляд, квадрокоптер оснащен 
+                  Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.
-                </p>                  
+                </p>
                 <!-- Характеристики товара -->
                 <table class="slider-specifications">
-                  <caption class="visually-hidden">Технические характеристики товара</caption>              
+                  <caption class="visually-hidden">Технические характеристики товара</caption>
                   <tr class="slider-specifications-meaning">
                     <td class="slider-specifications-cell">800 м</td>
                     <td class="slider-specifications-cell">50 м</td>
-                  </tr>              
+                  </tr>
                   <tr class="slider-specifications-term">
                     <td class="slider-specifications-cell">Дальность полета</td>
                     <td class="slider-specifications-cell">Радиус поражения</td>
-                  </tr>             
-                </table> 
-              </div>
-            </div>            
-            <div class="slider-item visually-hidden">              
-              <img class="slider-img" src="img/slider/fitness-bracelet.png" alt="Фитнес-браслет." width="560" height="560">
-              <div class="slider-descr">             
-                <h3 class="slider-title pre-line-text">Худеем 
-                  правильно!</h3>
-                <p class="slider-text">
-                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и 
-                  соблюдать диету.
-                </p>                            
-                <table class="slider-specifications">
-                  <caption class="visually-hidden">Технические характеристики товара</caption>              
-                  <tr class="slider-specifications-meaning">
-                    <td class="slider-specifications-cell">48 часов</td>                
-                  </tr>              
-                  <tr class="slider-specifications-term">
-                    <td class="slider-specifications-cell">Без подзарядки</td>                
-                  </tr>             
+                  </tr>
                 </table>
               </div>
             </div>
-            <div class="slider-item visually-hidden">  
-              <img class="slider-img" src="img/slider/selfie-stick.png" alt="Палка для селфи." width="560" height="560">           
+            <div class="slider-item visually-hidden">
+              <img class="slider-img" src="img/slider/fitness-bracelet.png" alt="Фитнес-браслет." width="560" height="560">
+              <div class="slider-descr">
+                <h3 class="slider-title pre-line-text">Худеем
+                  правильно!</h3>
+                <p class="slider-text">
+                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+                  соблюдать диету.
+                </p>
+                <table class="slider-specifications">
+                  <caption class="visually-hidden">Технические характеристики товара</caption>
+                  <tr class="slider-specifications-meaning">
+                    <td class="slider-specifications-cell">48 часов</td>
+                  </tr>
+                  <tr class="slider-specifications-term">
+                    <td class="slider-specifications-cell">Без подзарядки</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="slider-item visually-hidden">
+              <img class="slider-img" src="img/slider/selfie-stick.png" alt="Палка для селфи." width="560" height="560">
               <div class="slider-descr">
                 <h3 class="slider-title">Делай селфи, как Бен Стиллер!</h3>
                 <p class="slider-text">
-                  Самая длинная палка для селфи доступна в нашем магазине. 
+                  Самая длинная палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-                </p>                               
+                </p>
                 <table class="slider-specifications">
-                  <caption class="visually-hidden">Технические характеристики товара</caption>              
+                  <caption class="visually-hidden">Технические характеристики товара</caption>
                   <tr class="slider-specifications-meaning">
                     <td class="slider-specifications-cell">8,5 м</td>
                     <td class="slider-specifications-cell">5 кг</td>
                     <td class="slider-specifications-cell">Карбон</td>
-                  </tr>              
+                  </tr>
                   <tr class="slider-specifications-term">
                     <td class="slider-specifications-cell">Длина палки</td>
                     <td class="slider-specifications-cell">Вес палки</td>
                     <td class="slider-specifications-cell">Материал</td>
-                  </tr>             
+                  </tr>
                 </table>
               </div>
             </div>
-          </div> 
+          </div>
           <!-- Переключатели фото одного товара внутри одного слайда       -->
-          <div class="slider-arrow-list"> 
-            <div class="slider-arrow-item">                     
+          <div class="slider-arrow-list">
+            <div class="slider-arrow-item">
               <button class="slider-arrow slider-prev" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
             </div>
-            <div class="slider-arrow-item"> 
+            <div class="slider-arrow-item">
               <button class="slider-arrow slider-next" type="button">
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
           </div>
-          <!-- Кнопка+Пагинация слайдера. Находятся в одном блоке, т.к. должны быть на одной 
+          <!-- Кнопка+Пагинация слайдера. Находятся в одном блоке, т.к. должны быть на одной
             горизонтальной линии -->
           <div class="slider-control-wrapper">
             <a class="button slider-button" href="#">Подробнее</a>
-            <div class="slider-pagination">              
+            <div class="slider-pagination">
             <div class="slider-pagination-item">
               <button class="button slider-pagination-button slider-pagination-button-current" type="button">
                 <span class="visually-hidden">1 слайд</span>
@@ -185,7 +215,7 @@
               <button class="button slider-pagination-button" type="button">
                 <span class="visually-hidden">3 слайд</span>
               </button>
-            </div> 
+            </div>
             </div>
           </div>
         </div>
@@ -194,7 +224,7 @@
       <section class="categories">
         <div class="wrapper">
           <h2 class="visually-hidden">Категории товаров</h2>
-          <ul class="categories-list">          
+          <ul class="categories-list">
             <li class="categories-item">
               <a class="link categories-link" href="#">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -202,12 +232,12 @@
                   <path d="M116.131 85.639V73.003C116.131 71.694 117.176 70.633 118.466 70.633L126.792 72.214V64.02C126.792 61.665 125.084 60.589 122.59 59.755L99.4034 53.175C101.019 54.566 101.292 55.215 101.292 57.571V102.78C101.292 105.136 100.842 106.846 99.3254 107.99L122.59 100.925C124.991 100.092 126.792 96.709 126.792 94.353V86.44L118.466 88.007C117.176 88.009 116.131 86.947 116.131 85.639Z" fill="#363636"/>
                   <path d="M127.129 73.979L119.531 72.535C118.523 72.535 117.707 73.364 117.707 74.386V84.254C117.707 85.277 118.523 86.106 119.531 86.106L127.129 84.675C128.283 84.256 128.953 83.846 128.953 82.823V75.83C128.953 74.808 128.187 74.323 127.129 73.979Z" fill="#363636"/>
                   <path d="M99.1704 57.483C99.1704 52.403 94.9384 53.024 94.9384 53.024C94.9384 53.024 37.8324 57.738 34.8384 58.145C31.8444 58.552 32.0014 62.532 32.0014 62.532C32.0014 62.532 32.0004 95.069 32.0004 98.812C32.0004 102.555 34.5994 102.565 34.5994 102.565L51.0764 103.968L59.2124 92.3C59.2124 92.3 60.3214 90.472 61.7174 90.472C63.1144 90.472 64.1494 92.333 64.1494 92.333L73.2104 105.854C73.2104 105.854 92.1054 107.763 95.7314 107.763C99.3574 107.762 99.1704 102.739 99.1704 102.739C99.1704 102.739 99.1704 62.563 99.1704 57.483ZM44.9824 90.192C41.2844 90.192 38.2864 85.591 38.2864 79.917C38.2864 74.243 41.2844 69.642 44.9824 69.642C48.6804 69.642 51.6784 74.243 51.6784 79.917C51.6784 85.591 48.6804 90.192 44.9824 90.192ZM81.1404 91.618C76.4784 91.618 72.6994 86.379 72.6994 79.917C72.6994 73.454 76.4794 68.215 81.1404 68.215C85.8024 68.215 89.5824 73.454 89.5824 79.917C89.5824 86.379 85.8024 91.618 81.1404 91.618Z" fill="#363636"/>
-                </svg>                     
+                </svg>
                 <p class="categories-title">Виртуальная реальность</p>
               </a>
             </li>
             <li class="categories-item">
-              <a class="link categories-link" href="monopods.html">              
+              <a class="link categories-link" href="monopods.html">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <rect class="categories-icon-rect" width="160" height="160" fill="#FFE17F"/>
                   <g clip-path="url(#clip0_7242:200)">
@@ -220,13 +250,13 @@
                   <rect width="86" height="117" fill="white" transform="translate(37 43)"/>
                   </clipPath>
                   </defs>
-                </svg>              
+                </svg>
                 <p class="categories-title pre-line-text">Моноподы
                   для селфи</p>
               </a>
             </li>
             <li class="categories-item">
-              <a class="link categories-link" href="#">             
+              <a class="link categories-link" href="#">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <rect class="categories-icon-rect" width="160" height="160" fill="#FFE17F"/>
                   <g clip-path="url(#clip0_7242:201)">
@@ -246,12 +276,12 @@
                   <rect width="71" height="87" fill="white" transform="translate(49 38)"/>
                   </clipPath>
                   </defs>
-                </svg>            
+                </svg>
                 <p class="categories-title">Экшн-камеры</p>
               </a>
             </li>
             <li class="categories-item">
-              <a class="link categories-link" href="#">              
+              <a class="link categories-link" href="#">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <rect class="categories-icon-rect" width="160" height="160" fill="#FFE17F"/>
                   <g clip-path="url(#clip0_7242:202)">
@@ -263,12 +293,12 @@
                   <rect width="107" height="65" fill="white" transform="translate(26 50)"/>
                   </clipPath>
                   </defs>
-                </svg>                            
+                </svg>
                 <p class="categories-title">Фитнес-браслеты</p>
               </a>
             </li>
             <li class="categories-item">
-              <a class="link categories-link" href="#">             
+              <a class="link categories-link" href="#">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <rect class="categories-icon-rect" width="160" height="160" fill="#FFE17F"/>
                   <g clip-path="url(#clip0_7242:203)">
@@ -281,12 +311,12 @@
                   <rect width="56" height="98" fill="white" transform="translate(53 31)"/>
                   </clipPath>
                   </defs>
-                </svg>              
+                </svg>
                 <p class="categories-title">Умные часы</p>
               </a>
             </li>
             <li class="categories-item">
-              <a class="link categories-link" href="#">                         
+              <a class="link categories-link" href="#">
                 <svg class="categories-icon" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                   <rect class="categories-icon-rect" width="160" height="160" fill="#FFE17F"/>
                   <g clip-path="url(#clip0_7242:204)">
@@ -302,7 +332,7 @@
                   <rect width="132" height="69" fill="white" transform="translate(14 49)"/>
                   </clipPath>
                   </defs>
-                </svg>                          
+                </svg>
                 <p class="categories-title">Квадрокоптеры</p>
               </a>
             </li>
@@ -313,7 +343,7 @@
       <section class="services">
         <div class="wrapper services-wrapper">
           <h2 class="visually-hidden">Услуги</h2>
-          <!-- Нумерованный список - потому что каждая кнопка привязана к 
+          <!-- Нумерованный список - потому что каждая кнопка привязана к
           определенному описанию -->
           <ol class="services-tab-list">
             <li class="services-tab-item">
@@ -330,24 +360,24 @@
             <li class="services-item services-item-delivery">
               <div class="services-descr">
                 <h3 class="services-title">Доставка</h3>
-                <p class="services-text pre-line-text">Мы с удовольствием доставим ваш товар прямо 
-                  к вашему подъезду совершенно бесплатно! Ведь 
-                  мы неплохо заработаем, поднимая его на ваш этаж.</p>   
-              </div>             
+                <p class="services-text pre-line-text">Мы с удовольствием доставим ваш товар прямо
+                  к вашему подъезду совершенно бесплатно! Ведь
+                  мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
             </li>
             <li class="services-item services-item-warranty visually-hidden">
               <div class="services-descr">
                 <h3 class="services-title">Гарантия</h3>
-                <p class="services-text pre-line-text">Если из-за возгорания купленного у нас товара у вас 
-                  сгорит дом — не переживайте, мы выдадим вам новый. 
+                <p class="services-text pre-line-text">Если из-за возгорания купленного у нас товара у вас
+                  сгорит дом — не переживайте, мы выдадим вам новый.
                   Товар, не дом, конечно же.</p>
               </div>
             </li>
             <li class="services-item services-item-credit visually-hidden">
               <div class="services-descr">
                 <h3 class="services-title">Кредит</h3>
-                <p class="services-text pre-line-text">Залезть в долговую яму стало проще! Кредитные 
-                  консультанты подберут для вас наиболее выгодные 
+                <p class="services-text pre-line-text">Залезть в долговую яму стало проще! Кредитные
+                  консультанты подберут для вас наиболее выгодные
                   условия кредита. Выгодные для банка, разумеется.</p>
               </div>
             </li>
@@ -355,10 +385,10 @@
         </div>
       </section>
       <!-- Раздел с предложением -->
-      <section class="banner"> 
+      <section class="banner">
         <div class="wrapper banner-wrapper">
           <h2 class="visually-hidden">Заказ редкого товара</h2>
-          <a class="link banner-link" href="#">                  
+          <a class="link banner-link" href="#">
             <svg class="banner-icon" width="125" height="100" viewBox="0 0 125 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect class="banner-icon-rect" width="125" height="100" fill="#FFE17F"/>
               <g clip-path="url(#clip0_556:358)">
@@ -371,7 +401,7 @@
               <rect width="47" height="31" fill="white" transform="translate(39 35)"/>
               </clipPath>
               </defs>
-            </svg>                     
+            </svg>
             <p class="banner-text">Доставим редкий товар под заказ</p>
             <div class="banner-note"></div>
           </a>
@@ -379,11 +409,11 @@
       </section>
       <!-- Раздел о компании -->
       <div class="wrapper company-info-wrapper">
-        <section class="about">       
+        <section class="about">
           <h2 class="section-title company-info-section-title">О нас</h2>
           <p class="about-text pre-line-text">Огромный выбор гаджетов не оставит равнодушным
             гика, который есть в каждом из нас.</p>
-          <p class="about-text pre-line-text">Мы можем доставить ваш товар в самые отдалённые 
+          <p class="about-text pre-line-text">Мы можем доставить ваш товар в самые отдалённые
             уголки России транспортными компаниями:</p>
           <ul class="delivery-companies">
             <li class="delivery-companies-item">
@@ -401,8 +431,8 @@
         <!-- Раздел с контактами -->
         <section class="contacts">
           <h2 class="section-title company-info-section-title">Контакты</h2>
-          <p class="contacts-text pre-line-text">Вы можете забрать товар сами, заехав в наш офис. 
-            Заодно сможете проверить работоспособность покупки.</p>
+          <p class="contacts-text pre-line-text">Вы можете забрать товар сами, заехав в наш офис.
+            Заодно, сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <address class="contacts-address">
             <p class="contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -428,11 +458,11 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="newsletter-email">
               <label class="visually-hidden" for="newsletter-email">Email</label>
-              <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" 
+              <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email"
               id="newsletter-email">
             </p>
-            <button class="button newsletter-button" type="submit">Подписаться</button>  
-            <p class="newsletter-text newsletter-text-note">Это бесплатно</p>     
+            <button class="button newsletter-button" type="submit">Подписаться</button>
+            <p class="newsletter-text newsletter-text-note">Это бесплатно</p>
           </form>
         </div>
       </section>
@@ -500,5 +530,66 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-order">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="order-form-row">
+              <div class="field-group field-group-name">
+                <label class="order-form-label" for="order-name">Ваше имя:</label>
+                <input class="field order-form-field order-form-field-name order-form-field-error" type="text" id="order-name" name="order-name"
+                placeholder="Имя Фамилия">
+                <span class="order-field-note order-field-note-error">Пожалуйста, представьтесь</span>
+              </div>
+              <div class="field-group">
+                <label class="order-form-label" for="order-email">Ваш e-mail:</label>
+                <input class="field order-form-field order-form-field-email" type="email" id="order-email"
+                name="order-email" placeholder="krasotka92@mail.ru" required>
+                <span class="order-field-note order-field-note-email">Забавный у вас адрес</span>
+              </div>
+            </div>
+            <div class="order-form-row order-form-row-bottom">
+              <div class="field-group field-group-message">
+                <label class="order-form-label" for="order-message">Что нужно привезти:</label>
+                <input class="field order-form-field" type="text" id="order-message"
+                name="order-message" placeholder="В свободной форме">
+              </div>
+              <div class="field-group field-group-number">
+                <label class="order-form-label order-form-label-number" for="order-number">Количество:</label>
+                <span class="number-info"></span>
+                <div class="popover-info">
+                  <div class="popover-info-content">
+                    <h2 class="popover-info-title visually-hidden">Уточнения по кол-ву товара</h2>
+                    Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                    к провозу багажа.
+                  </div>
+                </div>
+                <div class="order-number-wrapper">
+                  <input class="field order-form-field order-form-field-number" type="text" id="order-number"
+                  name="order-number" placeholder="1">
+                  <button class="order-number-button order-number-button-minus" type="button">
+                    <svg class="order-number-button-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H0v2h16V7Z" fill="#000" opacity=".3"/>
+                    </svg>
+                    <span class="visually-hidden">Уменьшить на единицу</span>
+                  </button>
+                  <button class="order-number-button order-number-button-plus" type="button">
+                    <svg class="order-number-button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black" opacity="0.3"/>
+                    </svg>
+                    <span class="visually-hidden">Увеличить на единицу</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button order-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

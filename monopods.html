@@ -24,7 +24,7 @@
         <!-- Авторизация -->
         <div class="header-menu-right-wrapper">
           <div class="authorization">
-            <a class="link user-menu-link user-menu-link-login" href="#">Коля Петухов</a>
+            <a class="link user-menu-link user-menu-link-login user-menu-link-login-name" href="#">Коля Петухов</a>
             <a class="link user-menu-link authorization-action" href="#">Выйти</a>
           </div>
           <!-- Спецссылки -->
@@ -32,7 +32,7 @@
             <li class="user-special-item">
               <a class="link user-menu-link user-menu-link-compare" href="#">Сравнить</a>
             </li>
-            <li class="user-special-item">
+            <li class="user-special-item user-special-item-cart">
               <a class="link user-menu-link user-menu-link-cart" href="#">Корзина</a>
               <!-- Поповер с товарами в корзине -->
               <div class="popover-cart">
@@ -99,7 +99,7 @@
           <div class="header-menu-right-wrapper">
             <div class="header-menu-services-wrapper">
               <a class="link site-navigation-link site-navigation-link-services" href="#">Доставка</a>
-              <a class="link site-navigation-link site-navigation-link-services" href="#">Гарантия</a>
+              <a class="link site-navigation-link site-navigation-link-services warranty" href="#">Гарантия</a>
             </div>
             <a class="link site-navigation-link site-navigation-link-services header-contacts" href="#">Контакты</a>
           </div>
@@ -128,14 +128,14 @@
     <!-- Раздел с фильтрами и карточками товаров -->
       <section class="catalog-products">
         <div class="form-catalog-wrapper">
-          <h2 class="form-title form-title-left">Фильтр:</h2>
+          <h2 class="form-title">Фильтр:</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <!-- Фильтр цены -->
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость</legend>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 119px;">
+                  <div class="range-bar" style="left: 0; width: 110px;">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -156,7 +156,7 @@
             </fieldset>
             <!-- Фильтр цвета -->
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Цвет</legend>
+              <legend class="catalog-filter-title catalog-filter-title-color">Цвет</legend>
                 <div class="catalog-filter-list">
                   <input class="catalog-filter-input color-input visually-hidden" id="black-color" type="checkbox" name="black" checked>
                   <label class="catalog-filter-label" for="black-color">Черный</label>
@@ -172,7 +172,7 @@
             </fieldset>
             <!-- Фильтр Bluetooth -->
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Bluetooth</legend>
+              <legend class="catalog-filter-title catalog-filter-title-bluetoth">Bluetooth</legend>
               <div class="catalog-filter-list catalog-filter-bluetooth">
                 <input class="catalog-filter-input radio-input visually-hidden" id="with_bluetooth" type="radio" name="bluetooth" value="yes"
                 checked>
@@ -284,7 +284,7 @@
               <a class="link pagination-link pagination-number" href="#">2</a>
               <a class="link pagination-link pagination-number" href="#">3</a>
               <a class="link pagination-link pagination-number" href="#">...</a>
-              <a class="link pagination-link pagination-number" href="#">15</a>
+              <a class="link pagination-link pagination-number pagination-number-last" href="#">15</a>
               <a class="link pagination-link pagination-arrow pagination-next" href="#">Вперед</a>
             </div>
           </div>
