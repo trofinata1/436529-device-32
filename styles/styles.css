@@ -1,37 +1,35 @@
 /* Подключение шрифтов */
-
 /* Подключение шрифта Raleway */
-
 @font-face {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/raleway/raleway-800.woff2') format('woff2');
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
 /* Подключение шрифта Rubik */
 @font-face {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/rubik/rubik-400.woff2') format('woff2');
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/rubik/rubik-700.woff2') format('woff2');
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubik;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/rubik/rubik-800.woff2') format('woff2');
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -60,8 +58,8 @@
   --active-stroke-shadow: 0 0 0 2px var(--color-purple);
   --black-stroke: 2px solid var(--color-black);
   /* Шрифты */
-  --accent-font: Rubik, Tahoma, sans-serif;
-  --main-font: Raleway, Arial, sans-serif;
+  --accent-font: "Rubik", Tahoma, sans-serif;
+  --main-font: "Raleway", Arial, sans-serif;
 }
 
 /* Базовые стили */
@@ -72,7 +70,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1440px;
+  min-width: 1181px;
   min-height: 100%;
   margin: 0;
 
@@ -204,7 +202,7 @@ body {
   font-weight: 400;
 
   background-color: transparent;
-  background-image: url('../img/icons/search.svg');
+  background-image: url("../img/icons/search.svg");
   background-repeat: no-repeat;
   background-position: 16px center;
   border: var(--inactive-stroke);
@@ -354,7 +352,7 @@ body {
 .user-menu-link-login {
   padding-left: 40px;
 
-  background-image: url('../img/icons/user.svg');
+  background-image: url("../img/icons/user.svg");
   background-position: 19px;
 }
 
@@ -363,7 +361,7 @@ body {
 }
 
 .user-menu-link-compare {
-  background-image: url('../img/icons/compare.svg');
+  background-image: url("../img/icons/compare.svg");
   background-position: 27px;
 }
 
@@ -374,11 +372,13 @@ body {
   padding-left: 41px;
 
   background-position: 15px center;
-  background-image: url('../img/icons/cart.svg');
+  background-image: url("../img/icons/cart.svg");
+
+  z-index: 4;
 }
 
 .user-menu-link-cart::before {
-  content: '2';
+  content: "2";
 
   position: absolute;
   left: 0;
@@ -396,8 +396,22 @@ body {
   border-radius: 50%;
 }
 
+/* Псевдоэлемент ссылке для поповера (чтобы на него можно было перейти) */
+.user-menu-link-cart::after {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  right: -60px;
+
+  display: none;
+  width: 320px;
+  height: 350px;
+}
+
 /* Появление поповера с корзиной*/
-.user-menu-link-cart:hover + .popover-cart {
+.user-menu-link-cart:hover + .popover-cart,
+.user-menu-link-cart:hover::after {
   display: block;
 }
 
@@ -504,7 +518,7 @@ body {
 }
 
 .site-navigation-link-catalog::after {
-  content: '';
+  content: "";
 
   box-sizing: border-box;
 
@@ -517,7 +531,7 @@ body {
   width: 50px;
   height: 50px;
 
-  background-image: url('../img/icons/plus.svg');
+  background-image: url("../img/icons/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid rgba(0, 0, 0, 0.2);
@@ -525,7 +539,7 @@ body {
 }
 
 .site-navigation-link-catalog:hover::after {
-  background-image: url('../img/icons/minus-black.svg');
+  background-image: url("../img/icons/minus-black.svg");
   border-color: var(--color-black);
 }
 
@@ -610,7 +624,7 @@ body {
 }
 
 .site-navigation-link-services::after {
-  content: '';
+  content: "";
 
   position: absolute;
   right: 20px;
@@ -673,10 +687,6 @@ body {
   align-items: flex-start;
 }
 
-/* .slider-item:not(:nth-child(2)) {
-  display: none;
-} */
-
 .slider-descr {
   position: relative;
 
@@ -691,7 +701,7 @@ body {
 
 .slider-descr::before {
   counter-increment: slider-number;
-  content: '0' counter(slider-number);
+  content: "0" counter(slider-number);
 
   position: absolute;
   top: 15.4%;
@@ -761,12 +771,12 @@ body {
 }
 
 .slider-prev {
-  background-image: url('../img/icons/left-arrow.svg');
+  background-image: url("../img/icons/left-arrow.svg");
   background-repeat: no-repeat;
 }
 
 .slider-next {
-  background-image: url('../img/icons/left-arrow.svg');
+  background-image: url("../img/icons/left-arrow.svg");
   background-repeat: no-repeat;
   transform: rotate(180deg);
 }
@@ -875,26 +885,32 @@ body {
   padding: 0;
 }
 
+.categories-icon-rect {
+  width: 160px;
+  height: 160px;
+
+  background-color: var(--color-yellow);
+}
+
 .categories-link:hover .categories-icon-rect {
-  fill: var(--color-bright-yellow);
+  background-color: var(--color-bright-yellow);
 }
 
 .categories-link:focus .categories-icon-rect {
-  stroke: var(--color-purple);
-  stroke-width: 5px;
+  box-shadow: inset 0 0 0 5px var(--color-purple);
 }
 
 .categories-link:focus .categories-title {
   color: var(--color-purple);
 }
 
-.categories-link:active path {
+.categories-link:active .categories-icon {
   opacity: 0.3;
 }
 
 .categories-link:active .categories-icon-rect {
-  fill: var(--color-bright-yellow);
-  stroke: none;
+  background-color: var(--color-bright-yellow);
+  box-shadow: none;
 }
 
 .categories-link:active .categories-title {
@@ -996,15 +1012,15 @@ body {
 
 /* Убрала из html эти svg, т.к. они никак не изменяются. На лайве сказали, что такие надо через css задавать */
 .services-item-delivery {
-  background-image: url('../img/services/delivery.svg');
+  background-image: url("../img/services/delivery.svg");
 }
 
 .services-item-warranty {
-  background-image: url('../img/services/warranty.svg');
+  background-image: url("../img/services/warranty.svg");
 }
 
 .services-item-credit {
-  background-image: url('../img/services/credit.svg');
+  background-image: url("../img/services/credit.svg");
 }
 
 .services-descr {
@@ -1046,8 +1062,16 @@ body {
   padding-right: 33px;
 }
 
+.banner-icon-rect {
+  width: 125px;
+  height: 100px;
+  margin-right: 195px;
+
+  background-color: var(--color-yellow);
+}
+
 .banner-link:hover .banner-icon-rect {
-  fill: var(--color-bright-yellow);
+  background-color: var(--color-bright-yellow);
 }
 
 .banner-link:hover .banner-note {
@@ -1068,7 +1092,7 @@ body {
   box-shadow: none;
 }
 
-.banner-link:active path {
+.banner-link:active .banner-icon {
   opacity: 0.3;
 }
 
@@ -1099,7 +1123,7 @@ body {
 }
 
 .banner-note::after {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1110,7 +1134,7 @@ body {
   margin-top: -6px;
   margin-left: -1px;
 
-  background-image: url('../img/icons/info.svg');
+  background-image: url("../img/icons/info.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
 }
@@ -1158,7 +1182,7 @@ body {
 }
 
 .company-info-section-title::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -50px;
@@ -1196,7 +1220,7 @@ body {
 }
 
 .delivery-companies-item::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1307,7 +1331,7 @@ body {
 }
 
 .newsletter-text-note::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1317,7 +1341,7 @@ body {
   height: 14px;
   margin-top: -4px;
 
-  background-image: url('../img/icons/tick-big.svg');
+  background-image: url("../img/icons/tick-big.svg");
 }
 
 .field {
@@ -1441,7 +1465,7 @@ body {
 }
 
 .breadcrumbs-item:not(:last-child) .breadcrumbs-link::after {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1451,7 +1475,7 @@ body {
   width: 4px;
   height: 7px;
 
-  background-image: url('../img/icons/nav-arrow.svg');
+  background-image: url("../img/icons/nav-arrow.svg");
   background-repeat: no-repeat;
   opacity: 0.2;
 }
@@ -1477,8 +1501,6 @@ body {
 }
 
 .form-catalog-wrapper {
-  min-width: 32.4%;
-
   background-color: var(--color-catalog-filter);
 }
 
@@ -1487,7 +1509,7 @@ body {
   margin: 0;
   padding-top: 25px;
   padding-bottom: 26px;
-  padding-left: calc((100vw - var(--width-content)) / 2 + 96px);
+  padding-left: calc((100vw - var(--width-content)) / 2 + 50px);
 
   font-family: var(--main-font);
   font-size: 16px;
@@ -1504,7 +1526,7 @@ body {
 .catalog-filter {
   padding-top: 83px;
   padding-right: 69px;
-  padding-left: calc((100vw - var(--width-content)) / 2 + 96px);
+  padding-left: calc((100vw - var(--width-content)) / 2 + 50px);
 }
 
 .catalog-filter-group {
@@ -1536,7 +1558,7 @@ body {
 }
 
 .catalog-filter-title::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -14px;
@@ -1684,7 +1706,7 @@ body {
 
 /* Квадратики */
 .catalog-filter-label::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1704,7 +1726,7 @@ body {
 /* Галочки */
 /* Можно ли в этом случае иконки вставлять в стилях? Или все же надо было в html? */
 .catalog-filter-label::after {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 50%;
@@ -1716,7 +1738,7 @@ body {
   margin-top: -5px;
   margin-left: -4px;
 
-  background-image: url('../img/icons/tick.svg');
+  background-image: url("../img/icons/tick.svg");
 }
 
 /* Появление галочек */
@@ -1725,7 +1747,6 @@ body {
 }
 
 /* Состояния */
-
 /* Квадратик с галочкой */
 .catalog-filter-input:checked + .catalog-filter-label::before {
   border-color: var(--color-black);
@@ -1754,7 +1775,7 @@ body {
 }
 
 .color-input:focus + .catalog-filter-label::after {
-  background-image: url('../img/icons/tick-purple.svg');
+  background-image: url("../img/icons/tick-purple.svg");
   opacity: 1;
 }
 
@@ -1772,6 +1793,13 @@ body {
 .catalog-filter-input:active + .catalog-filter-label::after,
 .catalog-filter-input:checked:active + .catalog-filter-label::after {
   opacity: 0.2;
+}
+
+/* Неактивное поле */
+.catalog-filter-input:disabled  + .catalog-filter-label {
+  opacity: 0.2;
+
+  cursor: auto;
 }
 
 /* Радиокнопки  */
@@ -1866,7 +1894,7 @@ body {
   line-height: 19px;
 
   background-color: transparent;
-  background-image: url('../img/icons/dropdown.svg');
+  background-image: url("../img/icons/dropdown.svg");
   background-repeat: no-repeat;
   background-position: center right 25px;
   border: none;
@@ -1895,10 +1923,8 @@ body {
 }
 
 .sorting-button-wrapper {
-  position: absolute;
-  right: 132px;
-
   display: flex;
+  margin-right: -17px;
   margin-left: auto;
 }
 
@@ -1957,7 +1983,7 @@ body {
 }
 
 .product-img-link::after {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 0;
@@ -2129,7 +2155,6 @@ body {
   flex-wrap: wrap;
   min-height: 70px;
   padding: 0;
-  padding-right: 5px;
 
   background-color: var(--color-light-gray);
 }
@@ -2180,6 +2205,7 @@ body {
 }
 
 .pagination-next {
+  min-width: 137px; /*Я не стала бы ей задавать минимальную ширину, отличную от кнопки "Назад", потому что на мой взгляд и без этого хорошо смотрится, у нее нормальная ширина, но если не задать, тогда не по PP получается */
   margin-left: auto;
 }
 
@@ -2289,7 +2315,7 @@ body {
 }
 
 .footer-navigation-link::after {
-  content: '';
+  content: "";
 
   position: absolute;
   right: 20px;
@@ -2362,7 +2388,7 @@ body {
   opacity: 1;
 }
 
-.footer-social-link:focus .inner-icon {
+.footer-social-link:focus .social-icon {
   fill: var(--color-white);
 }
 
@@ -2372,7 +2398,7 @@ body {
   opacity: 1;
 }
 
-.footer-social-link:active .inner-icon {
+.footer-social-link:active .social-icon {
   fill: var(--color-dark);
   opacity: 0.3;
 }
@@ -2417,7 +2443,7 @@ body {
   outline: transparent;
 }
 
-.author-link:hover .author-link-img-inner {
+.author-link:hover .author-link-img {
   fill: var(--color-white);
 }
 
@@ -2429,7 +2455,7 @@ body {
   box-shadow: none;
 }
 
-.author-link:active .author-link-img-inner {
+.author-link:active .author-link-img {
   fill: rgba(125, 125, 125, 0.3);
 }
 
@@ -2460,7 +2486,7 @@ body {
 }
 
 .popover-cart::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -4px;
@@ -2493,13 +2519,13 @@ body {
   position: relative;
 
   display: grid;
-  grid-template-columns: 244px 11px;
+  grid-template-columns: 237px 11px;
   column-gap: 25px;
   align-items: center;
 }
 
 .cart-item:not(:last-child)::after {
-  content: '';
+  content: "";
 
   position: absolute;
   left: -20px;
@@ -2556,11 +2582,7 @@ body {
 }
 
 .cart-item-delite {
-  position: absolute;
-  top: 0px;
-  right: 0;
-
-  display: block;
+  align-self: start;
   width: 23px;
   height: 23px;
 
@@ -2632,15 +2654,25 @@ body {
 .modal-container {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
 
-  display: none;
-  width: 100%;
-  height: 100%;
+  display: none; /* при активации - flex */
 
   background-color: rgba(240, 240, 240, 0.9);
 
-  z-index: 3;
+  z-index: 4;
+}
+
+.modal-content {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .modal {
@@ -2648,10 +2680,10 @@ body {
 
   box-sizing: border-box;
   margin: auto;
-  padding-top: 62px;
+  padding-top: 63px;
   padding-right: 70px;
   padding-bottom: 78px;
-  padding-left: 70px;
+  padding-left: 69px;
 
   background-color: var(--color-white);
   border: 10px solid var(--color-black);
@@ -2665,8 +2697,8 @@ body {
 
 .modal-close-button {
   position: absolute;
-  top: 69px;
-  right: 60px;
+  top: 67px;
+  right: 58px;
 
   width: 50px;
   height: 50px;
@@ -2674,7 +2706,7 @@ body {
 
   background-color: #ffffff;
   border: none;
-  background-image: url('../img/icons/big-cross.svg');
+  background-image: url("../img/icons/big-cross.svg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -2700,9 +2732,9 @@ body {
 .modal-title {
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 68px;
+  margin-bottom: 66px;
 
-  font-family: Raleway, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 50px;
   font-weight: 800;
   line-height: 50px;
@@ -2718,18 +2750,18 @@ body {
 
 .order-form-row {
   display: flex;
-  margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 34px;
 }
 
 .order-form-row-bottom {
-  margin-bottom: 20px;
-  padding-top: 3px;
+  margin-bottom: 33px;
 }
 
 .field-group {
   position: relative;
 
-  width: 360px;
+  width: 50%;
 
   margin: 0;
   margin-bottom: 7px;
@@ -2740,12 +2772,12 @@ body {
 }
 
 .field-group-message {
-  width: 560px;
+  width: 100%;
   margin-right: 40px;
-  padding-top: 3px;
 }
 
 .field-group-number {
+  flex-shrink: 0;
   width: 160px;
 }
 
@@ -2765,12 +2797,13 @@ body {
 
   flex-direction: column;
   align-items: start;
+  margin-bottom: 0;
 
   z-index: 1;
 }
 
 .number-info {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -2px;
@@ -2780,7 +2813,7 @@ body {
   height: 26px;
 
   background-color: var(--color-yellow);
-  background-image: url('../img/icons/info.svg');
+  background-image: url("../img/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -2816,11 +2849,11 @@ body {
 }
 
 .order-form-field-name {
-  background-image: url('../img/icons/user-order.svg');
+  background-image: url("../img/icons/user-order.svg");
 }
 
 .order-form-field-email {
-  background-image: url('../img/icons/mail.svg');
+  background-image: url("../img/icons/mail.svg");
 }
 
 /* Состояния полей*/
@@ -2880,14 +2913,10 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
-  margin-top: 17px;
+  margin-top: 14px;
 
   background-color: var(--color-light);
   outline: transparent;
-}
-
-.order-form-label-number {
-  margin-bottom: 10px;
 }
 
 .order-form-field-number {
@@ -2939,6 +2968,8 @@ body {
 
   margin-top: -8px;
   margin-left: -8px;
+
+  opacity: 0.3;
 }
 
 .order-number-button-minus {
@@ -2952,7 +2983,7 @@ body {
 }
 
 /* Состояния кнопок прибавления/убавления товаров */
-.order-number-button:hover path {
+.order-number-button:hover .order-number-button-icon {
   opacity: 1;
 }
 
@@ -2964,7 +2995,7 @@ body {
   box-shadow: none;
 }
 
-.order-number-button:active path {
+.order-number-button:active .order-number-button-icon {
   opacity: 0.1;
 }
 
@@ -3016,7 +3047,7 @@ body {
 }
 
 .popover-info::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: -6px;
