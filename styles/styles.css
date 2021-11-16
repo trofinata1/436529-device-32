@@ -33,7 +33,7 @@
   font-display: swap;
 }
 
-/* Переменные, цвета */
+/* Переменные */
 :root {
   /* Основные цвета */
   --color-black: #000000;
@@ -184,9 +184,15 @@ body {
 
 .logo-link {
   display: inline-block;
+  margin-top: 12px;
   margin-bottom: 12px;
-  padding-top: 17px;
-  padding-left: 60px;
+  margin-left: 56px;
+
+  border-radius: 15px;
+}
+
+.logo-link:focus {
+  box-shadow: 0 0 0 5px var(--color-purple);
 }
 
 .search {
@@ -399,7 +405,7 @@ body {
   border-radius: 50%;
 }
 
-/* Псевдоэлемент ссылке для поповера (чтобы на него можно было перейти) */
+/* Псевдоэлемент ссылке для наведения для появления поповера */
 .user-menu-link-cart::after {
   content: "";
 
@@ -846,7 +852,7 @@ body {
 
   padding: 0;
 
-  background-image: none; /* Иначе наследуется градиент из .button  */
+  background-image: none;
   background-color: transparent;
   border-radius: 100%;
   border: 2px solid var(--color-black);
@@ -1017,7 +1023,6 @@ body {
   background-position: center right;
 }
 
-/* Убрала из html эти svg, т.к. они никак не изменяются. На лайве сказали, что такие надо через css задавать */
 .services-item-delivery {
   background-image: url("../img/services/delivery.svg");
 }
@@ -1756,7 +1761,6 @@ body {
 }
 
 /* Галочки */
-/* Можно ли в этом случае иконки вставлять в стилях? Или все же надо было в html? */
 .catalog-filter-label::after {
   content: "";
 
@@ -2239,7 +2243,7 @@ body {
 }
 
 .pagination-next {
-  min-width: 137px; /*Я не стала бы ей задавать минимальную ширину, отличную от кнопки "Назад", потому что на мой взгляд и без этого хорошо смотрится, у нее нормальная ширина, но если не задать, тогда не по PP получается */
+  min-width: 137px;
   margin-left: auto;
 }
 
@@ -2266,9 +2270,6 @@ body {
   background-color: var(--color-dark);
 }
 
-/* Ширина этого контейнера больше базового контейнера в 1160px. Это из-за того, что при фокусе у правых
-элементов в футере появляется обводка, которая выходит за границу базового контейнера в 1160px.
-А текст правых элементов оставется на уровне базового контейнера в 1160px. */
 .footer-wrapper {
   box-sizing: border-box;
   width: 1190px;
@@ -2277,7 +2278,14 @@ body {
 
 .footer-link {
   justify-content: start;
+  max-width: 155px;
   margin-bottom: 14px;
+
+  border-radius: 15px;
+}
+
+.footer-link:focus {
+  box-shadow: 0 0 0 5px var(--color-purple);
 }
 
 .footer-row {
@@ -2287,10 +2295,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Этот отступ нужен для дого, чтобы текст лого Академии оставался на одном
-  уровне со всем текстом сайта по правому краю. Дело в том, что у лого появляется при фокусе
-  обводка, которая отстоит от текста лого на 10px и выходит за границу правого уровня всего текста
-  на сайте и базового контейнера в 1160px.  */
 .footer-row-bottom {
   padding-right: 5px;
   padding-left: 6px;
@@ -2335,9 +2339,7 @@ body {
   position: relative;
 
   min-width: 165px;
-  min-height: 48px; /*не 50px, потому что при фокусе будет добавляться еще 2 px. Эти 2 px не
-  учитываются в блочной модели в dev tools, потому что тень как бы не считается, но визуально же
-  эти 2px есть, поэтому я их вычла, чтоб в итоге как на макете было. Вместе с тенью - 50px. */
+  min-height: 48px;
 
   font-family: var(--main-font);
   line-height: 21px;
